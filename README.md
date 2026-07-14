@@ -24,7 +24,6 @@ siddi-portfolio/
 │   ├── Header.tsx            # Shared Header component (reusable)
 │   └── Footer.tsx            # Shared Footer component (reusable)
 ├── public/
-│   ├── my-photo.png          # Generated profile photo (PNG)
 │   └── my-photo.jpg          # Profile photo (JPG copy)
 └── package.json
 ```
