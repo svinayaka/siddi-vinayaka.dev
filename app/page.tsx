@@ -160,7 +160,7 @@ export default function Home() {
                   name="name"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition outline-none"
-                  placeholder="Siddi Vinayaka"
+                  placeholder="Your Name"
                 />
               </div>
               
@@ -174,7 +174,7 @@ export default function Home() {
                   name="email"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition outline-none"
-                  placeholder="svinayaka290489@gmail.com"
+                  placeholder="name@gmail.com"
                 />
               </div>
               
@@ -188,7 +188,7 @@ export default function Home() {
                   rows={4}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 transition outline-none resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Reach out to me..."
                 />
               </div>
               
