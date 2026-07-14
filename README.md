@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Siddi Vinayaka | Senior Front-End Engineer Portfolio
 
-## Getting Started
+Professional portfolio and engineering case studies built with Next.js, React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js (App Router)
+- **UI Library**: React
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS & Vanilla CSS
+- **Typography**: Geist Sans & Geist Mono (Vercel)
+
+## 📂 Project Structure
+
+```
+siddi-portfolio/
+├── app/
+│   ├── case-studies/
+│   │   └── page.tsx          # Case Studies page listing key projects
+│   ├── globals.css           # Global theme & typography styles
+│   ├── layout.tsx            # Root layout configuration
+│   └── page.tsx              # Home page (Hero, About, Contact)
+├── components/
+│   ├── Header.tsx            # Shared Header component (reusable)
+│   └── Footer.tsx            # Shared Footer component (reusable)
+├── public/
+│   ├── my-photo.png          # Generated profile photo (PNG)
+│   └── my-photo.jpg          # Profile photo (JPG copy)
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Featured Case Studies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Here is a summary of the key engineering projects featured in the portfolio. You can read the detailed challenges, solutions, and business impacts on the [Case Studies Page](/case-studies).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Company / Project | Case Study Core | Key Tech |
+| :--- | :--- | :--- |
+| **Enterprise Energy Client** | Silverlight to Angular Migration (120+ screens, zero downtime) | Angular, RxJS, TypeScript, Micro Frontends |
+| **Financial Services Platform** | Metadata-Driven UI Rendering Engine (decoupled UI from releases) | React, TypeScript, JSON Schema, Dynamic UI |
+| **EdTech Learning Platform** | WCAG 2.1 AA Accessibility Overhaul (compliance score: 78% ➔ 94%) | Semantic HTML, WAI-ARIA, Screen Readers |
 
-## Learn More
+## 🛠️ Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+To run the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Connect
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **LinkedIn**: [linkedin.com/in/siddhivinayaka](https://www.linkedin.com/in/siddhivinayaka)
+- **Email**: [svinayaka290489@gmail.com](mailto:svinayaka290489@gmail.com)
+
+---
