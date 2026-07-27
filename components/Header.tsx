@@ -12,6 +12,7 @@ export default function Header() {
           width={40}
           height={40}
           className="rounded-full object-cover border border-gray-200 dark:border-gray-800"
+          priority={true}
         />
         <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition">
           Siddi Vinayaka
