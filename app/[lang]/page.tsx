@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
@@ -6,9 +7,9 @@ import { getDictionary, hasLocale } from "./dictionaries";
 
 export default async function Home({
   params,
-}: {
+}: Readonly<{
   params: Promise<{ lang: string }>;
-}) {
+}>) {
   const { lang } = await params;
 
   if (!hasLocale(lang)) {
@@ -67,18 +68,18 @@ export default async function Home({
 
           {/* 5. Call-to-Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <a
-              href="/case-studies"
+            <Link
+              href={`/${lang}/case-studies`}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 transition shadow-sm"
             >
               View Case Studies
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
               className="border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition"
             >
               Contact Me
-            </a>
+            </Link>
           </div>
         </section>
         {/* === ABOUT SECTION === */}
