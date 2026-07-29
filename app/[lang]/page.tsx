@@ -1,13 +1,26 @@
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/MobileMenu";
+import { getDictionary, hasLocale } from "./dictionaries";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+
+  if (!hasLocale(lang)) {
+    notFound();
+  }
+
+  const dict = await getDictionary(lang);
+
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Capabilities", href: "#capabilities" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Case Studies", href: `/${lang}/case-studies` },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" }
   ];
@@ -16,28 +29,20 @@ export default function Home() {
       <Header>
         <MobileMenu navLinks={navItems}/>
       </Header>
-      <nav>
-        <ul>
-          {navItems?.map((item) => (
-            <li key={item.name}>
-              <Link href={item.href}>
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div>
+        
+      </div>
       <main>
         {/* === 1. HERO SECTION === */}
         <section id="profile" className="text-center space-y-4 py-12 scroll-mt-20">
           {/* 1. Name */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Siddi Vinayaka
+            {dict.hero.title}
           </h1>
 
           {/* 2. Job Title */}
           <p className="text-2xl font-light text-gray-700 dark:text-gray-300">
-            Senior Front-End Engineer
+            {dict.hero.role}
           </p>
 
           {/* 3. Tech Stack Tags */}

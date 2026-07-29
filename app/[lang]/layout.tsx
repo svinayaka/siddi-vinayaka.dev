@@ -17,14 +17,22 @@ export const metadata: Metadata = {
   description: "10+ years of experience in React, Angular, Micro Frontends, and Design Systems.",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: "en" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
+
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
