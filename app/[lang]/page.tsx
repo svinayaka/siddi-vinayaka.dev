@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -38,27 +39,22 @@ export default async function Home({
         <section id="profile" className="text-center space-y-4 py-12 scroll-mt-20">
           {/* 1. Name */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {dict.hero.title}
+            Building Scalable Enterprise
           </h1>
 
           {/* 2. Job Title */}
           <p className="text-2xl font-light text-gray-700 dark:text-gray-300">
-            {dict.hero.role}
+            Frontend Platforms.
           </p>
 
           {/* 3. Tech Stack Tags */}
           <div className="flex flex-wrap justify-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400">
-            <span>React</span>
-            <span>·</span>
-            <span>TypeScript</span>
-            <span>·</span>
-            <span>Angular</span>
-            <span>·</span>
-            <span>Micro Frontends</span>
-            <span>·</span>
-            <span>Design Systems</span>
-            <span>·</span>
-            <span>WCAG 2.1 AA</span>
+            {dict.hero.tags.map((tag: string, index: number) => (
+              <Fragment key={tag}>
+                <span>{tag}</span>
+                {index < dict.hero.tags.length - 1 && <span>·</span>}
+              </Fragment>
+            ))}
           </div>
 
           {/* 4. Value Proposition (The "Staff Engineer" Differentiator) */}

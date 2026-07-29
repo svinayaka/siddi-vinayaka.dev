@@ -1,6 +1,14 @@
 {
-  "hero": {
-    "title": "Siddi Vinayaka",
-    "role": "Senior Front-End Engineer"
-  }
+    "hero": {
+        "title": "Siddi Vinayaka",
+        "role": "Senior Front-End Engineer",
+        "tags": [
+            "TypeScript",
+            "React",
+            "Angular",
+            "MFE",
+            "Design Systems",
+            "Accessibility"
+        ]
+    }
 }
