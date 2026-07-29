@@ -1,17 +1,21 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
   const navItems = [
-    { name: "Profile", href: "#profile" },
-    { name: "About", href: "#about" },
+    { name: "Home", href: "#home" },
+    { name: "Capabilities", href: "#capabilities" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Contact", href: "#contact" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" }
   ];
   return (
     <div className="main_container">
-      <Header />
+      <Header>
+        <MobileMenu navLinks={navItems}/>
+      </Header>
       <nav>
         <ul>
           {navItems?.map((item) => (
