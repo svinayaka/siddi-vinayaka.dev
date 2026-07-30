@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MobileMenu from "@/components/MobileMenu";
+import MobileMenu from "@/components/Menu";
 import { getDictionary, hasLocale } from "./dictionaries";
 import styles from "./page.module.css";
 

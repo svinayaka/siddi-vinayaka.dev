@@ -1,18 +1,31 @@
 "use client";
 import Link from "next/link"; 
 import { useState } from "react";
-import styles from "./MobileMenu.module.css";
+import styles from "./Menu.module.css";
 
-interface MobileMenuProps {
+interface MenuProps {
   navLinks: { name: string; href: string }[];
 }
 
-export default function MobileMenu({ navLinks }: MobileMenuProps) {
+export default function MobileMenu({ navLinks }: MenuProps) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const handleClick = () => {
         setIsOpen(openStatus => !openStatus);
     }
     return (
+        <>
+        <nav className="desktopMenuLinks">
+            {navLinks.map((link) => (
+                        <Link 
+                            key={link.name} 
+                            href={link.href} 
+                            onClick={() => setIsOpen(false)}
+                            className={styles.menuLink}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+        </nav>
         <div className={styles.menuWrapper}>
             <button 
                 onClick={handleClick} 
@@ -34,7 +47,7 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                 )}
             </button>
             {isOpen && (
-                <nav id="menuLinks" className={styles.menuDropdown}>
+                <nav id="mobileMenuLinks" className={styles.menuDropdown}>
                     {navLinks.map((link) => (
                         <Link 
                             key={link.name} 
@@ -48,5 +61,6 @@ export default function MobileMenu({ navLinks }: MobileMenuProps) {
                 </nav>
             )}
         </div>
+        </>
     )
 }
