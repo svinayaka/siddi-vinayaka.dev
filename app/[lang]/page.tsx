@@ -154,10 +154,10 @@ export default async function Home({
             {/* Contact Form */}
             <section>
               <h2 id="contact-form-title">Contact Me</h2>
-               <p id="form-helper-text" className={styles.formHelper}>
-    Fields marked with <span aria-hidden="true">*</span> are required.
-  </p>
-              <form className={styles.contactForm} 
+              <p id="form-helper-text" className={styles.formHelper}>
+                Fields marked with <span aria-hidden="true">*</span> are required.
+              </p>
+              <form className={styles.contactForm}
                 aria-labelledby="contact-form-title"
                 aria-describedby="form-helper-text"
               >
@@ -172,7 +172,11 @@ export default async function Home({
                     required
                     className={styles.formInput}
                     placeholder="Your Name"
+                    aria-describedby="name-description"
                   />
+                  <span id="name-description" className="sr-only">
+                    Please enter your full name.
+                  </span>
                 </div>
 
                 <div className={styles.formGroup}>
@@ -186,7 +190,11 @@ export default async function Home({
                     required
                     className={styles.formInput}
                     placeholder="name@gmail.com"
+                    aria-describedby="email-helper"
                   />
+                  <span id="email-helper" className="sr-only">
+                    We'll never share your email.
+                  </span>
                 </div>
 
                 <div className={styles.formGroup}>
@@ -200,7 +208,11 @@ export default async function Home({
                     required
                     className={styles.formInput}
                     placeholder="Reach out to me..."
+                    aria-describedby="message-description"
                   />
+                  <span id="message-description" className="sr-only">
+                    Please write your message here.
+                  </span>
                 </div>
 
                 <button
