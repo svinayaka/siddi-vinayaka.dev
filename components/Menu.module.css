@@ -1,4 +1,5 @@
 .menuWrapper {
+  display: block;
   position: relative;
 }
 
@@ -43,7 +44,25 @@
   gap: var(--spacing-2xs);
 }
 
-.mobileMenuLinks {
+.desktopMenuLinks {
+  display: none; /* Hide on mobile viewports */
+}
+
+.desktopMenuLink {
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.desktopMenuLink:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+.mobileMenuLink {
   display: block;
   padding: 8px 12px;
   font-size: var(--font-size-sm);
@@ -55,10 +74,22 @@
   transition: all 0.2s ease;
 }
 
-.mobileMenuLinks:hover {
+.mobileMenuLink:hover {
   color: var(--primary);
   opacity: 1;
   background-color: #f9fafb;
+}
+
+/* Responsiveness overrides */
+@media (min-width: 769px) {
+  .menuWrapper {
+    display: none; /* Hide mobile dropdown burger wrapper on desktop */
+  }
+  .desktopMenuLinks {
+    display: flex; /* Show desktop navigation inline */
+    gap: var(--spacing-md);
+    align-items: center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,18 +100,11 @@
     background-color: #0b0f19;
     border-color: var(--border-dark);
   }
-  .mobileMenuLinks:hover {
+  .desktopMenuLink:hover {
+    color: #60a5fa;
+  }
+  .mobileMenuLink:hover {
     color: #60a5fa;
     background-color: rgba(31, 41, 55, 0.5);
-  }
-}
-
-
-@media (max-width: 756px) {
-  .mobileMenuLinks, .menuWrapper,  .menuToggle {
-    display: none;
-  }
-  .desktopMenuLinks {
-    display: block;
   }
 }
