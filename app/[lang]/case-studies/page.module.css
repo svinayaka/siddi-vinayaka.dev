@@ -1,0 +1,200 @@
+.backLink {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media (prefers-color-scheme: dark) {
+  .backLink {
+    color: #60a5fa;
+  }
+}
+
+.casesMain {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  padding: 40px var(--spacing-md);
+}
+
+.casesHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.casesTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.casesDesc {
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.casesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.caseCard {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.caseCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .caseCard {
+    padding: 32px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .caseCard {
+    background-color: #0b0f19;
+    border-color: var(--border-dark);
+  }
+}
+
+.caseCardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.caseCardTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+}
+
+.caseCardTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.caseCardRoleMeta {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.caseCardCompany {
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.caseCardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tag {
+  background-color: #eff6ff;
+  color: var(--primary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background-color: rgba(30, 58, 138, 0.4);
+    color: #93c5fd;
+  }
+}
+
+.caseCardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .caseCardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .caseCardGrid {
+    border-color: var(--border-dark);
+  }
+}
+
+.caseCardColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.caseCardColumnTitle {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.caseCardColumnText {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  line-height: 1.625;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .caseCardColumnText {
+    color: #d1d5db;
+  }
+}
+
+.impactHighlight {
+  font-weight: 500;
+  color: #065f46;
+  background-color: rgba(240, 253, 244, 0.5);
+  border: 1px solid rgba(220, 252, 231, 0.5);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .impactHighlight {
+    color: #a7f3d0;
+    background-color: rgba(6, 78, 59, 0.2);
+    border-color: rgba(4, 120, 87, 0.3);
+  }
+}

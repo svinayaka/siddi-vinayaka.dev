@@ -1,15 +1,36 @@
-@import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Typographic Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px (Captions, helper text) */
+  --font-size-sm: 0.875rem;   /* 14px (Secondary / sub-text) */
+  --font-size-base: 1rem;     /* 16px (Standard body copy) */
+  --font-size-lg: 1.125rem;   /* 18px (Subheadings, buttons) */
+  --font-size-xl: 1.25rem;    /* 20px (Card titles, minor headings) */
+  --font-size-2xl: 1.5rem;    /* 24px (H3 headings / section titles) */
+  --font-size-3xl: 2rem;      /* 32px (H2 headings / page sub-titles) */
+  --font-size-4xl: 2.5rem;    /* 40px (H1 headings / page titles) */
+
+  /* Spacing Scale (Gaps, Margins, Paddings) */
+  --spacing-2xs: 0.125rem;   /* 2px */
+  --spacing-xs: 0.25rem;     /* 4px */
+  --spacing-sm: 0.5rem;      /* 8px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+
+  /* Brand Colors */
+  --primary: #2563eb;          /* Blue 600 */
+  --primary-hover: #1d4ed8;    /* Blue 700 */
+  --primary-dark: #1d4ed8;     /* Blue 700 for dark mode */
+  --primary-dark-hover: #2563eb; /* Blue 600 for dark mode hover */
+  
+  --border: #e5e7eb;           /* Gray 200 */
+  --border-dark: #1f2937;      /* Gray 800 */
+  
+  --text-muted: #6b7280;       /* Gray 500 */
+  --text-muted-light: #9ca3af; /* Gray 400 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,12 +43,40 @@
 html, body {
   min-height: 100dvh;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.layout-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Base Typography Bindings */
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-sm); }
+body, p { font-size: var(--font-size-base); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.625;
+  opacity: 0.9;
 }
 
 .main_container {

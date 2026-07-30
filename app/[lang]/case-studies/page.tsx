@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import styles from "./page.module.css";
 
 export default function CaseStudies() {
   const cases = [
@@ -40,61 +41,55 @@ export default function CaseStudies() {
       <nav>
         <ul>
           <li>
-            <Link href="/" className="text-blue-600 hover:underline">
+            <Link href="/" className={styles.backLink}>
               &larr; Back to Home
             </Link>
           </li>
         </ul>
       </nav>
 
-      <main className="max-w-4xl mx-auto space-y-12 py-10">
-        <div>
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Case Studies</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+      <main className={styles.casesMain}>
+        <div className={styles.casesHeader}>
+          <h1 className={styles.casesTitle}>Case Studies</h1>
+          <p className={styles.casesDesc}>
             Deep-dives into key enterprise projects I have designed, architected, and built throughout my career.
           </p>
         </div>
 
-        <div className="space-y-10">
+        <div className={styles.casesList}>
           {cases.map((project, idx) => (
-            <article 
-              key={idx} 
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition space-y-6"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-4">
-                <div className="space-y-1">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{project.title}</h2>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    {project.role} &middot; <span className="text-gray-700 dark:text-gray-300">{project.company}</span>
+            <article key={idx} className={styles.caseCard}>
+              <div className={styles.caseCardHeader}>
+                <div className={styles.caseCardTitleGroup}>
+                  <h2 className={styles.caseCardTitle}>{project.title}</h2>
+                  <p className={styles.caseCardRoleMeta}>
+                    {project.role} &middot; <span className={styles.caseCardCompany}>{project.company}</span>
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-1.5">
+                <div className={styles.caseCardTags}>
                   {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-md"
-                    >
+                    <span key={tag} className={styles.tag}>
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <div className="space-y-2">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">The Challenge</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{project.challenge}</p>
+              <div className={styles.caseCardGrid}>
+                <div className={styles.caseCardColumn}>
+                  <h3 className={styles.caseCardColumnTitle}>The Challenge</h3>
+                  <p className={styles.caseCardColumnText}>{project.challenge}</p>
                 </div>
                 
-                <div className="space-y-2">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">The Solution</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{project.solution}</p>
+                <div className={styles.caseCardColumn}>
+                  <h3 className={styles.caseCardColumnTitle}>The Solution</h3>
+                  <p className={styles.caseCardColumnText}>{project.solution}</p>
                 </div>
                 
-                <div className="space-y-2">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">The Impact</h3>
-                  <p className="text-sm leading-relaxed font-medium text-gray-800 dark:text-green-300 bg-green-50/50 dark:bg-green-950/20 border border-green-100/50 dark:border-green-900/30 p-3 rounded-lg">
+                <div className={styles.caseCardColumn}>
+                  <h3 className={styles.caseCardColumnTitle}>The Impact</h3>
+                  <p className={`${styles.caseCardColumnText} ${styles.impactHighlight}`}>
                     {project.impact}
                   </p>
                 </div>
