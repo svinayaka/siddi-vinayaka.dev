@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./Header.module.css";
 
-export default function Header({ children }: { children?: React.ReactNode }) {
+export default function Header({ children }: Readonly<{ children?: React.ReactNode }>) {
 
   return (
     <header className={styles.headerContainer}>

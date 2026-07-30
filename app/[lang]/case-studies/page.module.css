@@ -1,18 +1,33 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 .backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--primary);
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.2s ease;
+  font-size: var(--font-size-sm);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .backLink:hover {
-  text-decoration: underline;
-  opacity: 0.8;
+  color: var(--primary-hover);
+  transform: translateX(-4px);
 }
 
 @media (prefers-color-scheme: dark) {
   .backLink {
     color: #60a5fa;
+  }
+  .backLink:hover {
+    color: #93c5fd;
   }
 }
 

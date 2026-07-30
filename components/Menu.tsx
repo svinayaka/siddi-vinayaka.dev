@@ -7,7 +7,7 @@ interface MenuProps {
   navLinks: { name: string; href: string }[];
 }
 
-export default function MobileMenu({ navLinks }: MenuProps) {
+export default function MobileMenu({ navLinks }: Readonly<MenuProps>) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const handleClick = () => {
         setIsOpen(openStatus => !openStatus);

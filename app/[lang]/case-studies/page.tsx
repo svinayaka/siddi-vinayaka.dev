@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
@@ -35,20 +34,13 @@ export default function CaseStudies() {
   ];
 
   return (
-    <div className="main_container">
-      <Header />
-      
-      <nav>
-        <ul>
-          <li>
-            <Link href="/" className={styles.backLink}>
-              &larr; Back to Home
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
+    <div className={styles.pageContainer}>
       <main className={styles.casesMain}>
+        <div>
+          <Link href="/" className={styles.backLink}>
+            &larr; Back to Home
+          </Link>
+        </div>
         <div className={styles.casesHeader}>
           <h1 className={styles.casesTitle}>Case Studies</h1>
           <p className={styles.casesDesc}>
