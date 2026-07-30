@@ -31,9 +31,6 @@ export default async function Home({
       <Header>
         <MobileMenu navLinks={navItems}/>
       </Header>
-      <div>
-        
-      </div>
       <main>
         {/* === 1. HERO SECTION === */}
         <section id="profile" className="text-center space-y-4 py-12 scroll-mt-20">
