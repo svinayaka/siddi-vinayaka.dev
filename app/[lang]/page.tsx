@@ -22,9 +22,9 @@ export default async function Home({
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "Capabilities", href: "#capabilities" },
+    { name: "Capabilities", href: `/${lang}/capabilities` },
     { name: "Case Studies", href: `/${lang}/case-studies` },
-    { name: "Experience", href: "#experience" },
+    { name: "Experience", href: `/${lang}/experience` },
     { name: "Contact", href: "#contact" }
   ];
   return (
