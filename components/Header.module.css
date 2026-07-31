@@ -111,7 +111,7 @@
     border-bottom-color: rgba(255, 255, 255, 0.05);
   }
   .headerTitleLink:hover .headerName {
-    color: #60a5fa;
+    color: var(--primary-dark);
   }
   .btnResume {
     background-color: var(--primary-dark);

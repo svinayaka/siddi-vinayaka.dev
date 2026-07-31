@@ -20,16 +20,59 @@
   --spacing-lg: 1.5rem;      /* 24px */
   --spacing-xl: 2rem;        /* 32px */
 
+  /* Design Tokens: Color Scales */
+  /* Indigo Scale */
+  --indigo-50: #eff6ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+
+  /* Emerald Scale */
+  --emerald-50: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+
+  /* Slate Scale (Neutrals) */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
   /* Brand Colors */
-  --primary: #2563eb;          /* Blue 600 */
-  --primary-hover: #1d4ed8;    /* Blue 700 */
-  --primary-dark: #1d4ed8;     /* Blue 700 for dark mode */
-  --primary-dark-hover: #2563eb; /* Blue 600 for dark mode hover */
+  --primary: var(--indigo-600);          /* Indigo 600 */
+  --primary-hover: var(--indigo-700);    /* Indigo 700 */
+  --primary-dark: var(--indigo-500);     /* Indigo 500 for dark mode */
+  --primary-dark-hover: var(--indigo-400); /* Indigo 400 for dark mode hover */
   
-  --border: #e5e7eb;           /* Gray 200 */
-  --border-dark: #1f2937;      /* Gray 800 */
+  --secondary: var(--emerald-600);          /* Emerald 600 */
+  --secondary-hover: var(--emerald-700);    /* Emerald 700 */
+  --secondary-dark: var(--emerald-500);     /* Emerald 500 for dark mode */
+  --secondary-dark-hover: var(--emerald-400); /* Emerald 400 for dark mode hover */
   
-  --text-muted: #6b7280;       /* Gray 500 */
+  --border: var(--slate-200);           /* Slate 200 */
+  --border-dark: var(--slate-800);      /* Slate 800 */
+  
+  --text-muted: var(--slate-500);       /* Slate 500 */
 }
 
 @media (min-width: 1024px) {
