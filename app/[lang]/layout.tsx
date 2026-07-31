@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from "./layout.module.css";
 
-const RTL_LOCALES = ["ar", "he", "fa", "ur"];
+const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  const direction = RTL_LOCALES.includes(lang) ? "rtl" : "ltr";
+  const direction = RTL_LOCALES.has(lang) ? "rtl" : "ltr";
 
   return (
     <html
@@ -39,7 +40,7 @@ export default async function RootLayout({
       dir={direction}
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="layout-body">{children}</body>
+      <body className={styles.layoutBody}>{children}</body>
     </html>
   );
 }

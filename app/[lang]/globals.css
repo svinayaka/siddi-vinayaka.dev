@@ -83,12 +83,6 @@ body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-.layout-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-}
-
 /* Base Typography Bindings */
 h1 { font-size: var(--font-size-4xl); }
 h2 { font-size: var(--font-size-3xl); }
