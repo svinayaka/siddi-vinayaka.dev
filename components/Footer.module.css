@@ -1,0 +1,13 @@
+.footerContainer {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footerContainer {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+}

@@ -28,11 +28,11 @@ export default async function Home({
     { name: "Contact", href: "#contact" }
   ];
   return (
-    <div className="main_container">
+    <div className={styles.mainContainer}>
       <Header>
         <MobileMenu navLinks={navItems} />
       </Header>
-      <main>
+      <main className={styles.mainContent}>
         {/* === 1. HERO SECTION === */}
         <section id="profile" className={styles.heroSection}>
           {/* 1. Name */}
@@ -62,18 +62,69 @@ export default async function Home({
 
           {/* 5. Call-to-Action Buttons */}
           <div className={styles.heroActions}>
+            <Link 
+              href={`/${lang}/capabilities`}
+              className={`${styles.btn} ${styles.btnPrimary}`}
+              >
+                Explore Capabilities
+              </Link>
             <Link
               href={`/${lang}/case-studies`}
               className={`${styles.btn} ${styles.btnPrimary}`}
             >
               View Case Studies
             </Link>
-            <Link
-              href="#contact"
-              className={`${styles.btn} ${styles.btnSecondary}`}
-            >
-              Contact Me
-            </Link>
+          </div>
+        </section>
+
+        <section className={styles.statsContainer}>
+          <div className={styles.statsItem}>
+            <div className={`${styles.iconContainer} ${styles.iconBlue}`}>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 className={`${styles.metric} ${styles.metricBlue}`}>500K+</h3>
+            <p className={styles.description}>Users Impacted</p>
+          </div>
+
+          <div className={styles.statsItem}>
+            <div className={`${styles.iconContainer} ${styles.iconGreen}`}>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h3 className={`${styles.metric} ${styles.metricGreen}`}>60+</h3>
+            <p className={styles.description}>Reusable Components</p>
+          </div>
+
+          <div className={styles.statsItem}>
+            <div className={`${styles.iconContainer} ${styles.iconPurple}`}>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <h3 className={`${styles.metric} ${styles.metricPurple}`}>10+</h3>
+            <p className={styles.description}>Years of Experience</p>
+          </div>
+
+          <div className={styles.statsItem}>
+            <div className={`${styles.iconContainer} ${styles.iconYellow}`}>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 11 11 13 15 9" />
+              </svg>
+            </div>
+            <h3 className={`${styles.metric} ${styles.metricYellow}`}>94%</h3>
+            <p className={styles.description}>Accessibility (WCAG)</p>
           </div>
         </section>
 
@@ -84,19 +135,19 @@ export default async function Home({
           <div className={styles.aboutContent}>
             {/* Paragraph 1: The Expertise */}
             <p>
-              I am a Senior Front-End Engineer with <strong>10+ years of experience</strong>
+              I am a Senior Front-End Engineer with <strong>10+ years of experience</strong>{" "}
               building enterprise web platforms, reusable UI systems, and high-performance applications
-              across Media, Energy, and EdTech sectors. My core expertise lies in
-              <strong> React, TypeScript, Angular, and Micro Frontend architectures</strong>.
+              across Media, Energy, and EdTech sectors. My core expertise lies in{" "}
+              <strong>React, TypeScript, Angular, and Micro Frontend architectures</strong>.
             </p>
 
             {/* Paragraph 2: The Differentiator (The "Staff" Edge) */}
             <p>
               I specialize in modernizing monolithic legacy applications
-              (Silverlight → Angular, AngularJS → React) and architecting
-              <strong> metadata-driven rendering frameworks</strong> that decouple frontend UIs
-              from backend changes. I am also deeply committed to
-              <strong> accessibility (WCAG 2.1 AA) and performance optimization</strong>,
+              (Silverlight → Angular, AngularJS → React) and architecting{" "}
+              <strong>metadata-driven rendering frameworks</strong> that decouple frontend UIs
+              from backend changes. I am also deeply committed to{" "}
+              <strong>accessibility (WCAG 2.1 AA) and performance optimization</strong>,
               having led VPAT evaluations that improved accessibility scores from 78% to 94%.
             </p>
 
@@ -193,7 +244,7 @@ export default async function Home({
                     aria-describedby="email-helper"
                   />
                   <span id="email-helper" className="sr-only">
-                    We'll never share your email.
+                    We&apos;ll never share your email.
                   </span>
                 </div>
 

@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .headerLeft {
@@ -103,6 +106,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .headerContainer {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
   .headerTitleLink:hover .headerName {
     color: #60a5fa;
   }
