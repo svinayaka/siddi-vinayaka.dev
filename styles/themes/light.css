@@ -1,0 +1,21 @@
+:root {
+  /* Core Semantic Mappings */
+  --background: var(--white);
+  --foreground: var(--slate-900);
+
+  /* Brand Colors */
+  --primary: var(--indigo-600);          /* Indigo 600 */
+  --primary-hover: var(--indigo-700);    /* Indigo 700 */
+  --primary-dark: var(--indigo-500);     /* Indigo 500 for dark mode */
+  --primary-dark-hover: var(--indigo-400); /* Indigo 400 for dark mode hover */
+  
+  --secondary: var(--emerald-600);          /* Emerald 600 */
+  --secondary-hover: var(--emerald-700);    /* Emerald 700 */
+  --secondary-dark: var(--emerald-500);     /* Emerald 500 for dark mode */
+  --secondary-dark-hover: var(--emerald-400); /* Emerald 400 for dark mode hover */
+  
+  --border: var(--slate-200);           /* Slate 200 */
+  --border-dark: var(--slate-800);      /* Slate 800 */
+  
+  --text-muted: var(--slate-500);       /* Slate 500 */
+}

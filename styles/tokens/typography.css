@@ -1,0 +1,25 @@
+:root {
+  /* Typographic Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px (Captions, helper text) */
+  --font-size-sm: 0.875rem;   /* 14px (Secondary / sub-text) */
+  --font-size-base: 1rem;     /* 16px (Standard body copy) */
+  --font-size-lg: 1.125rem;   /* 18px (Subheadings, buttons) */
+  --font-size-xl: 1.25rem;    /* 20px (Card titles, minor headings) */
+  --font-size-2xl: 1.5rem;    /* 24px (H3 headings / section titles) */
+  --font-size-3xl: 2rem;      /* 32px (H2 headings / page sub-titles) */
+  --font-size-4xl: 2.5rem;    /* 40px (H1 headings / page titles) */
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Responsive Desktop Typographic Font Sizes scale-up */
+    --font-size-xs: 0.875rem;    /* 14px */
+    --font-size-sm: 1rem;       /* 16px */
+    --font-size-base: 1.125rem;  /* 18px (Premium large body copy) */
+    --font-size-lg: 1.25rem;     /* 20px */
+    --font-size-xl: 1.5rem;      /* 24px */
+    --font-size-2xl: 2rem;       /* 32px */
+    --font-size-3xl: 2.75rem;    /* 44px */
+    --font-size-4xl: 3.75rem;    /* 60px (Hero main text) */
+  }
+}
