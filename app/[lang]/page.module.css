@@ -371,58 +371,58 @@
 
 /* Icon custom styling & gradients */
 .iconBlue {
-  background-color: rgba(79, 70, 229, 0.08);
+  background-color: color-mix(in srgb, var(--indigo-600) 8%, transparent);
   color: var(--primary);
-  border: 1px solid rgba(79, 70, 229, 0.12);
+  border: 1px solid color-mix(in srgb, var(--indigo-600) 12%, transparent);
 }
 @media (prefers-color-scheme: dark) {
   .iconBlue {
-    background-color: rgba(99, 102, 241, 0.12);
+    background-color: color-mix(in srgb, var(--indigo-500) 12%, transparent);
     color: var(--primary-dark);
-    border-color: rgba(99, 102, 241, 0.15);
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+    border-color: color-mix(in srgb, var(--indigo-500) 15%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--indigo-500) 15%, transparent);
   }
 }
 
 .iconGreen {
-  background-color: rgba(5, 150, 105, 0.08);
+  background-color: color-mix(in srgb, var(--emerald-600) 8%, transparent);
   color: var(--secondary);
-  border: 1px solid rgba(5, 150, 105, 0.12);
+  border: 1px solid color-mix(in srgb, var(--emerald-600) 12%, transparent);
 }
 @media (prefers-color-scheme: dark) {
   .iconGreen {
-    background-color: rgba(16, 185, 129, 0.12);
+    background-color: color-mix(in srgb, var(--emerald-500) 12%, transparent);
     color: var(--secondary-dark);
-    border-color: rgba(16, 185, 129, 0.15);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+    border-color: color-mix(in srgb, var(--emerald-500) 15%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--emerald-500) 15%, transparent);
   }
 }
 
 .iconPurple {
-  background-color: rgba(139, 92, 246, 0.08);
-  color: #7c3aed;
-  border: 1px solid rgba(139, 92, 246, 0.12);
+  background-color: color-mix(in srgb, var(--violet-500) 8%, transparent);
+  color: var(--violet-600);
+  border: 1px solid color-mix(in srgb, var(--violet-500) 12%, transparent);
 }
 @media (prefers-color-scheme: dark) {
   .iconPurple {
-    background-color: rgba(167, 139, 250, 0.12);
-    color: #a78bfa;
-    border-color: rgba(167, 139, 250, 0.15);
-    box-shadow: 0 0 15px rgba(167, 139, 250, 0.15);
+    background-color: color-mix(in srgb, var(--violet-400) 12%, transparent);
+    color: var(--violet-400);
+    border-color: color-mix(in srgb, var(--violet-400) 15%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--violet-400) 15%, transparent);
   }
 }
 
 .iconYellow {
-  background-color: rgba(245, 158, 11, 0.08);
-  color: #d97706;
-  border: 1px solid rgba(245, 158, 11, 0.12);
+  background-color: color-mix(in srgb, var(--amber-500) 8%, transparent);
+  color: var(--amber-600);
+  border: 1px solid color-mix(in srgb, var(--amber-500) 12%, transparent);
 }
 @media (prefers-color-scheme: dark) {
   .iconYellow {
-    background-color: rgba(251, 191, 36, 0.12);
-    color: #fbbf24;
-    border-color: rgba(251, 191, 36, 0.15);
-    box-shadow: 0 0 15px rgba(251, 191, 36, 0.15);
+    background-color: color-mix(in srgb, var(--amber-400) 12%, transparent);
+    color: var(--amber-400);
+    border-color: color-mix(in srgb, var(--amber-400) 15%, transparent);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--amber-400) 15%, transparent);
   }
 }
 
@@ -459,25 +459,25 @@
 }
 
 .metricPurple {
-  color: #7c3aed;
+  color: var(--violet-600);
 }
 @media (prefers-color-scheme: dark) {
   .metricPurple {
-    color: #a78bfa;
+    color: var(--violet-400);
   }
 }
 
 .metricYellow {
-  color: #d97706;
+  color: var(--amber-600);
 }
 @media (prefers-color-scheme: dark) {
   .metricYellow {
-    color: #fbbf24;
+    color: var(--amber-400);
   }
 }
 
 .description {
-  color: #4b5563;
+  color: var(--slate-600);
   font-size: var(--font-size-sm);
   margin: 0;
   line-height: 1.4;
@@ -492,7 +492,7 @@
 
 @media (prefers-color-scheme: dark) {
   .description {
-    color: #9ca3af;
+    color: var(--slate-400);
   }
 }
 
