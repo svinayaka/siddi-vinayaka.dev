@@ -30,6 +30,7 @@ export default function MobileMenu({ navLinks }: Readonly<MenuProps>) {
             {/* Mobile View: burger button dropdown */}
             <div className={styles.menuWrapper}>
                 <button 
+                    type="button"
                     onClick={handleClick} 
                     aria-expanded={isOpen} 
                     aria-controls="mobileMenuLinks" 

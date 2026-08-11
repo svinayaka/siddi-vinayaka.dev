@@ -7,7 +7,7 @@ import MobileMenu from "@/components/Menu";
 import { getDictionary, hasLocale } from "./dictionaries";
 import styles from "./page.module.css";
 
-export default async function Home({
+export default async function Portfolio({
   params,
 }: Readonly<{
   params: Promise<{ lang: string }>;
@@ -29,7 +29,7 @@ export default async function Home({
   ];
   return (
     <div className={styles.mainContainer}>
-      <Header>
+      <Header lang={lang}>
         <MobileMenu navLinks={navItems} />
       </Header>
       <main className={styles.mainContent}>

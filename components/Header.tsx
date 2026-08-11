@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./Header.module.css";
 
-export default function Header({ children }: Readonly<{ children?: React.ReactNode }>) {
+export default function Header({ children, lang = "en" }: Readonly<{ children?: React.ReactNode; lang?: string }>) {
 
   return (
     <header className={styles.headerContainer}>
@@ -18,7 +18,7 @@ export default function Header({ children }: Readonly<{ children?: React.ReactNo
             className={styles.headerAvatar}
             priority={true}
           />
-          <Link href="/" className={styles.headerTitleLink}>
+          <Link href={`/${lang}`} className={styles.headerTitleLink}>
             <h3 className={styles.headerName}>Siddi Vinayaka</h3>
             <p className={styles.headerSubtitle}>Senior Front Engineer</p>
           </Link>

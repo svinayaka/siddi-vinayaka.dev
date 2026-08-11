@@ -2,9 +2,15 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 
-export default function CaseStudies() {
+export default async function CaseStudies({
+  params,
+}: Readonly<{
+  params: Promise<{ lang: string }>;
+}>) {
+  const { lang } = await params;
   const cases = [
     {
+      id: Date.now(),
       title: "Silverlight to Angular Migration",
       role: "Lead Front-End Architect",
       company: "Enterprise Energy Client",
@@ -14,6 +20,7 @@ export default function CaseStudies() {
       impact: "Successfully completed migration ahead of schedule with zero operational downtime. Reduced application initial load time by 45% and improved CPU/Memory efficiency by 60%."
     },
     {
+      id: Date.now(),
       title: "Metadata-Driven UI Rendering Engine",
       role: "Senior UI Engineer",
       company: "Large Financial Services Platform",
@@ -23,6 +30,7 @@ export default function CaseStudies() {
       impact: "Reduced the time-to-market for launching new country onboarding flows from 3 weeks to less than 2 hours. Eliminated 85% of standard frontend request tickets."
     },
     {
+      id: Date.now(),
       title: "WCAG 2.1 AA Accessibility Overhaul",
       role: "Accessibility Lead & Engineer",
       company: "EdTech Platform (500K+ Active Users)",
@@ -37,7 +45,7 @@ export default function CaseStudies() {
     <div className={styles.pageContainer}>
       <main className={styles.casesMain}>
         <div>
-          <Link href="/" className={styles.backLink}>
+          <Link href={`/${lang}`} className={styles.backLink}>
             &larr; Back to Home
           </Link>
         </div>
@@ -49,8 +57,8 @@ export default function CaseStudies() {
         </div>
 
         <div className={styles.casesList}>
-          {cases.map((project, idx) => (
-            <article key={idx} className={styles.caseCard}>
+          {cases.map((project) => (
+            <article key={project.id} className={styles.caseCard}>
               <div className={styles.caseCardHeader}>
                 <div className={styles.caseCardTitleGroup}>
                   <h2 className={styles.caseCardTitle}>{project.title}</h2>
