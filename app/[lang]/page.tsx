@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import MobileMenu from "@/components/Menu";
 import { getDictionary, hasLocale } from "./dictionaries";
 import styles from "./page.module.css";
+import ContactFormMFE from '../../mfe-components/contact-form';
 
 export default async function Portfolio({
   params,
@@ -203,7 +204,7 @@ export default async function Portfolio({
             </div>
 
             {/* Contact Form */}
-            <section>
+            {/* <section>
               <h2 id="contact-form-title">Contact Me</h2>
               <p id="form-helper-text" className={styles.formHelper}>
                 Fields marked with <span aria-hidden="true">*</span> are required.
@@ -273,6 +274,9 @@ export default async function Portfolio({
                   Send Message
                 </button>
               </form>
+            </section> */}
+            <section>
+              <ContactFormMFE />
             </section>
           </div>
         </section>
