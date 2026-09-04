@@ -17,5 +17,5 @@
   --border: var(--slate-200);           /* Slate 200 */
   --border-dark: var(--slate-800);      /* Slate 800 */
   
-  --text-muted: var(--slate-500);       /* Slate 500 */
+  --text-muted: var(--slate-600);       /* Slate 600 - WCAG AA & AAA compliant contrast */
 }

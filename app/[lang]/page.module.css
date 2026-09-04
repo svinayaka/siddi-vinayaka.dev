@@ -79,10 +79,11 @@
 
 @media (prefers-color-scheme: dark) {
   .btnPrimary {
-    background-color: var(--primary-dark);
+    background-color: var(--primary);
+    color: var(--white);
   }
   .btnPrimary:hover {
-    background-color: var(--primary-dark-hover);
+    background-color: var(--primary-hover);
   }
   .btnSecondary {
     border-color: var(--border-dark);

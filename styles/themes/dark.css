@@ -2,5 +2,7 @@
   :root {
     --background: var(--slate-950);
     --foreground: var(--slate-100);
+    --text-muted: var(--slate-400);       /* Slate 400 - WCAG AA & AAA compliant contrast in dark mode */
+    --border: var(--slate-800);
   }
 }

@@ -67,7 +67,7 @@
 .headerSubtitle {
   margin: 0;
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-normal);
   color: var(--text-muted);
 }
 
@@ -131,10 +131,11 @@
   }
 
   .btnResume {
-    background-color: var(--primary-dark);
+    background-color: var(--primary);
+    color: var(--white);
   }
 
   .btnResume:hover {
-    background-color: var(--primary-dark-hover);
+    background-color: var(--primary-hover);
   }
 }
