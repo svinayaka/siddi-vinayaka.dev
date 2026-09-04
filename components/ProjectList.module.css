@@ -1,0 +1,15 @@
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .heroTags {
+    color: var(--primary-dark);
+  }
+}

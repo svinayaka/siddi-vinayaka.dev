@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/Menu";
+import ProjectList from "@/components/ProjectList";
 import { getDictionary, hasLocale } from "./dictionaries";
 import styles from "./page.module.css";
 import ContactFormMFE from '../../mfe-components/contact-form';
@@ -47,14 +48,7 @@ export default async function Portfolio({
           </p>
 
           {/* 3. Tech Stack Tags */}
-          <div className={styles.heroTags}>
-            {dict.hero.tags.map((tag: string, index: number) => (
-              <Fragment key={tag}>
-                <span>{tag}</span>
-                {index < dict.hero.tags.length - 1 && <span>·</span>}
-              </Fragment>
-            ))}
-          </div>
+          <ProjectList lang={lang}/>
 
           {/* 4. Value Proposition (The "Staff Engineer" Differentiator) */}
           <p className={styles.heroDescription}>
