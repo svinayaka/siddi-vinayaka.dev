@@ -1,7 +1,7 @@
 .footerContainer {
   background-color: rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: var(--spacing-lg);
   width: 100%;
 }
 
