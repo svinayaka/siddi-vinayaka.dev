@@ -6,4 +6,12 @@
   --spacing-md: 1rem;        /* 16px */
   --spacing-lg: 1.5rem;      /* 24px */
   --spacing-xl: 2rem;        /* 32px */
+  --spacing-2xl: 3rem;       /* 48px */
+
+  /* Border Radii */
+  --radius-xs: 0.25rem;      /* 4px */
+  --radius-sm: 0.5rem;       /* 8px */
+  --radius-md: 0.75rem;      /* 12px */
+  --radius-lg: 1rem;         /* 16px */
+  --radius-full: 9999px;
 }

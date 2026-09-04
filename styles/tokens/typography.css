@@ -8,6 +8,14 @@
   --font-size-2xl: 1.5rem;    /* 24px (H3 headings / section titles) */
   --font-size-3xl: 2rem;      /* 32px (H2 headings / page sub-titles) */
   --font-size-4xl: 2.5rem;    /* 40px (H1 headings / page titles) */
+
+  /* Typographic Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 }
 
 @media (min-width: 1024px) {

@@ -12,7 +12,7 @@
   gap: 0.5rem;
   color: var(--primary);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-sm);
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -48,7 +48,7 @@
 
 .casesTitle {
   font-size: var(--font-size-3xl);
-  font-weight: 800;
+  font-weight: var(--font-weight-extrabold);
   color: var(--foreground);
   margin: 0;
 }
@@ -110,14 +110,14 @@
 
 .caseCardTitle {
   font-size: var(--font-size-2xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--foreground);
   margin: 0;
 }
 
 .caseCardRoleMeta {
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--text-muted);
   margin: 0;
 }
@@ -137,7 +137,7 @@
   background-color: var(--indigo-50);
   color: var(--primary);
   font-size: var(--font-size-xs);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 4px 10px;
   border-radius: 6px;
 }
@@ -177,7 +177,7 @@
 
 .caseCardColumnTitle {
   font-size: var(--font-size-xs);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted-light);
@@ -198,7 +198,7 @@
 }
 
 .impactHighlight {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: #065f46;
   background-color: rgba(240, 253, 244, 0.5);
   border: 1px solid rgba(220, 252, 231, 0.5);

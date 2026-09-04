@@ -5,7 +5,8 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .headerLeft {
@@ -20,18 +21,22 @@
 }
 
 .headerAvatar {
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   object-fit: cover;
   flex-shrink: 0;
-  width: 8rem; /* 128px */
-  height: 8rem; /* 128px */
+  width: 8rem;
+  /* 128px */
+  height: 8rem;
+  /* 128px */
 }
 
 @media (min-width: 768px) {
   .headerAvatar {
-    width: 10rem; /* 160px */
-    height: 10rem; /* 160px */
+    width: 10rem;
+    /* 160px */
+    height: 10rem;
+    /* 160px */
   }
 }
 
@@ -51,7 +56,7 @@
 .headerName {
   margin: 0;
   font-size: var(--font-size-xl);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--foreground);
 }
 
@@ -62,7 +67,7 @@
 .headerSubtitle {
   margin: 0;
   font-size: var(--font-size-xs);
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   color: var(--text-muted);
 }
 
@@ -70,6 +75,16 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.headerTitleSection {
+  flex: 1;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .btnResume {
@@ -77,11 +92,11 @@
   align-items: center;
   gap: var(--spacing-xs);
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--white);
   font-size: var(--font-size-sm);
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 8px;
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
   text-decoration: none;
   transition: all 0.2s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -97,8 +112,8 @@
 }
 
 .btnResumeIcon {
-  width: 1rem;
-  height: 1rem;
+  width: var(--spacing-md);
+  height: var(--spacing-md);
 }
 
 .headerMenuSlot {
@@ -110,12 +125,15 @@
     background-color: rgba(255, 255, 255, 0.02);
     border-bottom-color: rgba(255, 255, 255, 0.05);
   }
+
   .headerTitleLink:hover .headerName {
     color: var(--primary-dark);
   }
+
   .btnResume {
     background-color: var(--primary-dark);
   }
+
   .btnResume:hover {
     background-color: var(--primary-dark-hover);
   }
