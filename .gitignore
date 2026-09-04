@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+#local configuration
+.vscode/launch.json
+
 # next.js
 /.next/
 /out/
