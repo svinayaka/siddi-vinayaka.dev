@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/Menu";
 import ProjectList from "@/components/ProjectList";
-import { getDictionary, hasLocale } from "./dictionaries";
+import { hasLocale } from "./dictionaries";
 import styles from "./page.module.css";
 import ContactFormMFE from '../../mfe-components/contact-form';
 
@@ -19,8 +19,6 @@ export default async function Portfolio({
   if (!hasLocale(lang)) {
     notFound();
   }
-
-  const dict = await getDictionary(lang);
 
   const navItems = [
     { name: "Home", href: "#home" },
