@@ -1,3 +1,5 @@
+@use '@/styles/tokens/breakpoints' as *;
+
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -31,7 +33,7 @@
   /* 128px */
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .headerAvatar {
     width: 10rem;
     /* 160px */
@@ -51,6 +53,10 @@
   display: flex;
   flex-direction: column;
   transition: color 0.2s ease;
+
+  &:hover .headerName {
+    color: var(--primary);
+  }
 }
 
 .headerName {
@@ -58,10 +64,6 @@
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--foreground);
-}
-
-.headerTitleLink:hover .headerName {
-  color: var(--primary);
 }
 
 .headerSubtitle {
@@ -101,14 +103,14 @@
   transition: all 0.2s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   cursor: pointer;
-}
 
-.btnResume:hover {
-  background-color: var(--primary-hover);
-}
+  &:hover {
+    background-color: var(--primary-hover);
+  }
 
-.btnResume:active {
-  transform: scale(0.95);
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .btnResumeIcon {
@@ -133,9 +135,9 @@
   .btnResume {
     background-color: var(--primary);
     color: var(--white);
-  }
 
-  .btnResume:hover {
-    background-color: var(--primary-hover);
+    &:hover {
+      background-color: var(--primary-hover);
+    }
   }
 }

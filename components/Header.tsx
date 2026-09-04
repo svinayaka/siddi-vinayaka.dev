@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 export default function Header({ children, lang = "en" }: Readonly<{ children?: React.ReactNode; lang?: string }>) {
 

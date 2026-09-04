@@ -1,5 +1,6 @@
 @layer tokens, themes, resets, base;
 
+@import "../../styles/tokens/breakpoints.css" layer(tokens);
 @import "../../styles/tokens/colors.css" layer(tokens);
 @import "../../styles/tokens/spacing.css" layer(tokens);
 @import "../../styles/tokens/typography.css" layer(tokens);

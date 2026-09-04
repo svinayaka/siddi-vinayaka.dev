@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link"; 
 import { useState } from "react";
-import styles from "./Menu.module.css";
+import styles from "./Menu.module.scss";
 
 interface MenuProps {
   navLinks: { name: string; href: string }[];

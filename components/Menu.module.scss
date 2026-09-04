@@ -1,3 +1,5 @@
+@use '@/styles/tokens/breakpoints' as *;
+
 .menuWrapper {
   display: block;
   position: relative;
@@ -15,11 +17,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.menuToggle:hover {
-  color: var(--primary);
-  opacity: 1;
+  &:hover {
+    color: var(--primary);
+    opacity: 1;
+  }
 }
 
 .menuIcon {
@@ -56,11 +58,11 @@
   color: var(--foreground);
   opacity: 0.8;
   transition: all 0.2s ease;
-}
 
-.desktopMenuLink:hover {
-  color: var(--primary);
-  opacity: 1;
+  &:hover {
+    color: var(--primary);
+    opacity: 1;
+  }
 }
 
 .mobileMenuLink {
@@ -73,16 +75,16 @@
   opacity: 0.8;
   border-radius: 8px;
   transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--primary);
+    opacity: 1;
+    background-color: #f9fafb;
+  }
 }
 
-.mobileMenuLink:hover {
-  color: var(--primary);
-  opacity: 1;
-  background-color: #f9fafb;
-}
-
-/* Responsiveness overrides */
-@media (min-width: 769px) {
+/* Responsiveness overrides using SCSS Breakpoint Token Mixin */
+@include respond-to('md') {
   .menuWrapper {
     display: none;
     /* Hide mobile dropdown burger wrapper on desktop */

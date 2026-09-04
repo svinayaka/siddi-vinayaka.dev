@@ -1,3 +1,5 @@
+@use '@/styles/tokens/breakpoints' as *;
+
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -15,19 +17,20 @@
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-sm);
   transition: transform 0.2s ease, color 0.2s ease;
-}
 
-.backLink:hover {
-  color: var(--primary-hover);
-  transform: translateX(-4px);
+  &:hover {
+    color: var(--primary-hover);
+    transform: translateX(-4px);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .backLink {
     color: var(--primary-dark);
-  }
-  .backLink:hover {
-    color: var(--primary-dark-hover);
+
+    &:hover {
+      color: var(--primary-dark-hover);
+    }
   }
 }
 
@@ -75,13 +78,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
 }
 
-.caseCard:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-@media (min-width: 768px) {
+@include respond-to('md') {
   .caseCard {
     padding: var(--spacing-xl);
   }
@@ -157,7 +160,7 @@
   border-top: 1px solid var(--border);
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .caseCardGrid {
     grid-template-columns: repeat(3, 1fr);
   }

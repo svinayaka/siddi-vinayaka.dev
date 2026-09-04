@@ -1,0 +1,8 @@
+:root {
+  /* Breakpoint Tokens (Reference / Layout scale) */
+  --breakpoint-sm: 640px;  /* Mobile landscape & small devices */
+  --breakpoint-md: 768px;  /* Tablets / iPad portrait */
+  --breakpoint-lg: 1024px; /* Laptops & desktops */
+  --breakpoint-xl: 1280px; /* Wide desktop screens */
+  --breakpoint-2xl: 1536px; /* Ultra-wide displays */
+}

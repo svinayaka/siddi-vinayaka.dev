@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default async function CaseStudies({
   params,
@@ -13,7 +13,7 @@ export default async function CaseStudies({
     // 1. POWER SCHOOL (Mar 2023 - Dec 2025) - MOST RECENT
     // ============================================================
     {
-      id: Date.now(),
+      id: "case-powerschool",
       title: "Enterprise Design System & Accessibility Overhaul",
       role: "Senior Software Engineer",
       company: "PowerSchool Group LLC (EdTech, 500K+ Users)",
@@ -30,7 +30,7 @@ export default async function CaseStudies({
     // 2. ONETRUST (Dec 2020 - Mar 2023)
     // ============================================================
     {
-      id: Date.now() + 1,
+      id: "case-onetrust",
       title: "Micro Frontends & Shared Angular Component Library",
       role: "Senior Software Engineer (UI)",
       company: "OneTrust",
@@ -47,7 +47,7 @@ export default async function CaseStudies({
     // 3. BAKER HUGHES (Aug 2018 - Nov 2020)
     // ============================================================
     {
-      id: Date.now() + 2,
+      id: "case-bakerhughes",
       title: "Real-Time Operational Data Visualization Dashboards",
       role: "Software Engineer",
       company: "Baker Hughes (Oil & Gas)",
@@ -64,7 +64,7 @@ export default async function CaseStudies({
     // 4. TIME INC. (Apr 2017 - Aug 2018)
     // ============================================================
     {
-      id: Date.now() + 3,
+      id: "case-timeinc",
       title: "Silverlight to Angular Administration App Migration",
       role: "Software Engineer",
       company: "Time Inc.",
@@ -81,7 +81,7 @@ export default async function CaseStudies({
     // 5. SPIRE TECHNOLOGIES (Dec 2015 - Jun 2016)
     // ============================================================
     {
-      id: Date.now() + 4,
+      id: "case-spire",
       title: "Skill-Relationship Visualization & Recruiting Automation",
       role: "Software Engineer",
       company: "Spire Technologies",
@@ -98,7 +98,7 @@ export default async function CaseStudies({
     // 6. EDCITE LEARNING (Dec 2013 - Jun 2015) - OLDEST
     // ============================================================
     {
-      id: Date.now() + 5,
+      id: "case-edcite",
       title: "Interactive Assessment Component Library",
       role: "Software Engineer",
       company: "Edcite Learning (EdTech)",

@@ -1,3 +1,5 @@
+@use '@/styles/tokens/breakpoints' as *;
+
 .heroSection {
   text-align: center;
   padding: 48px 0;
@@ -14,7 +16,7 @@
   line-height: 1.15;
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .heroTitle {
     font-size: 3.75rem; /* 60px */
   }
@@ -61,35 +63,38 @@
   background-color: var(--primary);
   color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
 
-.btnPrimary:hover {
-  background-color: var(--primary-hover);
+  &:hover {
+    background-color: var(--primary-hover);
+  }
 }
 
 .btnSecondary {
   border: 1px solid var(--border);
   background-color: transparent;
   color: var(--foreground);
-}
 
-.btnSecondary:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .btnPrimary {
     background-color: var(--primary);
     color: var(--white);
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
   }
-  .btnPrimary:hover {
-    background-color: var(--primary-hover);
-  }
+
   .btnSecondary {
     border-color: var(--border-dark);
-  }
-  .btnSecondary:hover {
-    background-color: rgba(255, 255, 255, 0.03);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
   }
 }
 
@@ -138,7 +143,7 @@
   gap: 48px;
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .contactLayout {
     grid-template-columns: 1fr 1fr;
   }
@@ -199,10 +204,10 @@
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
-}
 
-.contactLink:hover {
-  color: var(--primary);
+  &:hover {
+    color: var(--primary);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -254,21 +259,22 @@
   transition: all 0.2s ease;
   outline: none;
   box-sizing: border-box;
-}
 
-.formInput:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .formInput {
     border-color: var(--border-dark);
     background-color: #000000;
-  }
-  .formInput:focus {
-    border-color: var(--primary-dark);
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+
+    &:focus {
+      border-color: var(--primary-dark);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
   }
 }
 
@@ -300,14 +306,14 @@
   }
 }
 
-@media (min-width: 640px) {
+@include respond-to('sm') {
   .statsContainer {
     gap: 32px;
     padding: 32px;
   }
 }
 
-@media (min-width: 1024px) {
+@include respond-to('lg') {
   .statsContainer {
     gap: 0;
     padding: 40px 24px;
@@ -322,17 +328,18 @@
   transition: transform 0.2s ease;
 }
 
-@media (min-width: 1024px) {
+@include respond-to('lg') {
   .statsItem {
     padding: 12px 32px;
-  }
-  .statsItem:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.06);
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.06);
+    }
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  @media (min-width: 1024px) {
+  @include respond-to('lg') {
     .statsItem:not(:last-child) {
       border-right-color: rgba(255, 255, 255, 0.05);
     }
@@ -360,6 +367,7 @@
   color: var(--primary);
   border: 1px solid color-mix(in srgb, var(--indigo-600) 12%, transparent);
 }
+
 @media (prefers-color-scheme: dark) {
   .iconBlue {
     background-color: color-mix(in srgb, var(--indigo-500) 12%, transparent);
@@ -374,6 +382,7 @@
   color: var(--secondary);
   border: 1px solid color-mix(in srgb, var(--emerald-600) 12%, transparent);
 }
+
 @media (prefers-color-scheme: dark) {
   .iconGreen {
     background-color: color-mix(in srgb, var(--emerald-500) 12%, transparent);
@@ -388,6 +397,7 @@
   color: var(--violet-600);
   border: 1px solid color-mix(in srgb, var(--violet-500) 12%, transparent);
 }
+
 @media (prefers-color-scheme: dark) {
   .iconPurple {
     background-color: color-mix(in srgb, var(--violet-400) 12%, transparent);
@@ -402,6 +412,7 @@
   color: var(--amber-600);
   border: 1px solid color-mix(in srgb, var(--amber-500) 12%, transparent);
 }
+
 @media (prefers-color-scheme: dark) {
   .iconYellow {
     background-color: color-mix(in srgb, var(--amber-400) 12%, transparent);
@@ -414,12 +425,12 @@
 .metric {
   font-size: 1.85rem;
   font-weight: var(--font-weight-bold);
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .metric {
     font-size: 2.15rem;
   }
@@ -428,6 +439,7 @@
 .metricBlue {
   color: var(--primary);
 }
+
 @media (prefers-color-scheme: dark) {
   .metricBlue {
     color: var(--primary-dark);
@@ -437,6 +449,7 @@
 .metricGreen {
   color: var(--secondary);
 }
+
 @media (prefers-color-scheme: dark) {
   .metricGreen {
     color: var(--secondary-dark);
@@ -446,6 +459,7 @@
 .metricPurple {
   color: var(--violet-600);
 }
+
 @media (prefers-color-scheme: dark) {
   .metricPurple {
     color: var(--violet-400);
@@ -455,6 +469,7 @@
 .metricYellow {
   color: var(--amber-600);
 }
+
 @media (prefers-color-scheme: dark) {
   .metricYellow {
     color: var(--amber-400);
@@ -469,7 +484,7 @@
   font-weight: var(--font-weight-medium);
 }
 
-@media (min-width: 756px) {
+@include respond-to('md') {
   .description {
     font-size: var(--font-size-2xl);
   }
@@ -481,7 +496,7 @@
   }
 }
 
-/* Layout Grid Styles moved from globals.css */
+/* Layout Grid Styles */
 .mainContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -490,17 +505,16 @@
     'header'
     'navigation'
     'content'
-    'footer'  
-  ;
+    'footer';
   min-height: 100dvh;
-}
 
-.mainContainer header {
-  grid-area: header;
-}
+  header {
+    grid-area: header;
+  }
 
-.mainContainer footer {
-  grid-area: footer;
+  footer {
+    grid-area: footer;
+  }
 }
 
 .mainContent {
@@ -508,14 +522,13 @@
   padding: 40px 20px;
 }
 
-@media (min-width: 768px) {
+@include respond-to('md') {
   .mainContainer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 1fr auto;
     grid-template-areas: 
       'header header'
       'content content'
-      'footer footer'
-    ;
+      'footer footer';
   }
 }

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import MobileMenu from "@/components/Menu";
 import ProjectList from "@/components/ProjectList";
 import { hasLocale } from "./dictionaries";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import ContactFormMFE from '../../mfe-components/contact-form';
 
 export default async function Portfolio({
