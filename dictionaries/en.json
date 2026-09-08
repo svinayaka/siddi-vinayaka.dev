@@ -1,15 +1,244 @@
 {
-    "hero": {
-        "title": "Siddi Vinayaka",
-        "role": "Senior Front-End Engineer",
-        "tags": [
-            "TypeScript",
-            "React",
-            "Angular",
-            "Next",
-            "MFE",
-            "Design Systems",
-            "Accessibility"
+  "hero": {
+    "title": "Siddi Vinayaka",
+    "role": "Senior Front-End Engineer",
+    "tags": [
+      "TypeScript",
+      "React",
+      "Angular",
+      "Next",
+      "MFE",
+      "Design Systems",
+      "Accessibility"
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "10+ years architecting enterprise frontend applications, design systems, micro frontends, and high-performance Web Component architectures.",
+    "metrics": [
+      {
+        "value": "10+ Years",
+        "label": "Enterprise Experience"
+      },
+      {
+        "value": "60+",
+        "label": "Shared Components"
+      },
+      {
+        "value": "78% → 94%",
+        "label": "VPAT Accessibility"
+      },
+      {
+        "value": "30% → 80%",
+        "label": "Test Coverage"
+      }
+    ],
+    "timelineHeading": "Career Timeline",
+    "items": [
+      {
+        "id": "powerschool",
+        "role": "Senior Software Engineer",
+        "company": "PowerSchool Group LLC",
+        "industry": "EdTech (500K+ Users)",
+        "period": "Mar 2023 - Dec 2025",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Designed and maintained 60+ framework-agnostic Web Components for an enterprise Design System adopted by multiple engineering teams across React and Angular applications.",
+          "Led VPAT accessibility evaluations and improved an internal accessibility audit score from 78% to 94% by applying WCAG 2.1 AA, semantic HTML, and ARIA practices to reusable components.",
+          "Established Playwright and WebDriverIO E2E automation using Chrome DevTools Protocol and integrated regression coverage into the release pipeline, improving confidence in shared UI releases.",
+          "Defined component requirements and API contracts with product, UX, and engineering teams, and documented component APIs, states, and usage patterns to support consistent adoption."
+        ],
+        "outcome": "Elevated accessibility compliance from 78% to 94% across enterprise apps and established CDP-based automated E2E regression testing.",
+        "skills": [
+          "React",
+          "Angular",
+          "Web Components",
+          "Design Systems",
+          "WCAG 2.1 AA",
+          "Playwright",
+          "WebDriverIO",
+          "Chrome DevTools Protocol",
+          "CI/CD"
         ]
+      },
+      {
+        "id": "onetrust",
+        "role": "Senior Software Engineer (UI)",
+        "company": "OneTrust",
+        "industry": "Enterprise Privacy & Governance",
+        "period": "Dec 2020 - Mar 2023",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Led migration toward a Micro Frontend architecture by developing a shared Angular library published as versioned npm packages and adopted across multiple internal product modules.",
+          "Developed reusable WCAG 2.1 AA-compliant components using HTML, CSS, Angular, and TypeScript, incorporating responsive design, lazy loading, and virtual scrolling.",
+          "Strengthened frontend quality through Cypress, Karma, Jasmine, SonarQube-integrated CI, and automated unit and integration testing.",
+          "Partnered with backend engineers on REST API integrations, routing, JSON data contracts, package upgrades, and consistent UI behavior across product modules."
+        ],
+        "outcome": "Architected versioned shared Angular MFE library across product modules, standardizing enterprise UI and test quality.",
+        "skills": [
+          "Micro Frontends",
+          "Angular",
+          "TypeScript",
+          "Cypress",
+          "Karma",
+          "Jasmine",
+          "SonarQube",
+          "REST APIs",
+          "Virtual Scrolling",
+          "npm Packages"
+        ]
+      },
+      {
+        "id": "baker-hughes",
+        "role": "Software Engineer",
+        "company": "Baker Hughes",
+        "industry": "Energy & Industrial IoT",
+        "period": "Aug 2018 - Nov 2020",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Built reusable React and Angular dashboard components driven by backend-managed JSON contracts, enabling multiple teams to render operational views consistently.",
+          "Created reusable D3.js and Plotly visualization components for time-series operational dashboards and data presentation.",
+          "Optimized incoming-data rendering through efficient JSON processing, throttling, and reduced unnecessary chart re-renders.",
+          "Coordinated REST API contracts, JSON schemas, frontend integration, and application architecture with backend teams."
+        ],
+        "outcome": "Engineered zero-lag real-time sensor dashboards with D3.js/Plotly and dynamic JSON schema-driven rendering.",
+        "skills": [
+          "React",
+          "Angular",
+          "D3.js",
+          "Plotly",
+          "JSON Schemas",
+          "Time-Series Data",
+          "REST APIs",
+          "Performance Optimization"
+        ]
+      },
+      {
+        "id": "time-inc",
+        "role": "Software Engineer",
+        "company": "Time Inc.",
+        "industry": "Media & Digital Publishing",
+        "period": "Apr 2017 - Aug 2018",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Modernized a legacy Silverlight administration application by migrating its UI to Angular with Kendo UI.",
+          "Improved performance through lazy loading, virtual scrolling, and route-level component caching.",
+          "Engineered responsive SCSS layouts and reusable UI patterns, and mentored a junior frontend developer on Angular implementation and reusable-component practices."
+        ],
+        "outcome": "Delivered full modernization from legacy Silverlight to Angular with Kendo UI, cutting load times by ~30%.",
+        "skills": [
+          "Angular",
+          "TypeScript",
+          "Kendo UI",
+          "SCSS",
+          "Lazy Loading",
+          "Virtual Scrolling",
+          "Legacy Migration"
+        ]
+      },
+      {
+        "id": "mphasis",
+        "role": "Software Engineer",
+        "company": "Mphasis (Client: Schneider Electric)",
+        "industry": "Energy Management & Product Config",
+        "period": "Jun 2016 - Apr 2017",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Developed a region-aware AngularJS application for product configuration, supporting global product rules and configurable frontend behavior.",
+          "Improved page-load performance by approximately 30% through sprite sheets, lazy loading, asset optimization, and resource-loading improvements.",
+          "Increased unit-test coverage from 30% to 80% using Karma and Jasmine.",
+          "Integrated frontend support for backend-managed record locking and REST APIs."
+        ],
+        "outcome": "Increased unit test coverage from 30% to 80% and boosted load performance by 30% with asset optimization.",
+        "skills": [
+          "AngularJS",
+          "JavaScript",
+          "Karma",
+          "Jasmine",
+          "Asset Optimization",
+          "REST APIs",
+          "Unit Testing"
+        ]
+      },
+      {
+        "id": "spire",
+        "role": "Software Engineer",
+        "company": "Spire Technologies",
+        "industry": "Talent Intelligence & Search",
+        "period": "Dec 2015 - Jun 2016",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Created an interactive D3.js skill-relationship visualization that helped recruiters compare related skills and identify stronger or weaker candidate matches.",
+          "Built a Tag Automation frontend for recruiter search and evaluation workflows, surfacing structured skill signals to reduce manual review effort."
+        ],
+        "outcome": "Built interactive D3.js skill graphs and tag automation, reducing candidate screening time for recruiters.",
+        "skills": [
+          "D3.js",
+          "JavaScript",
+          "Data Visualization",
+          "Search UI",
+          "UI Engineering"
+        ]
+      },
+      {
+        "id": "edcite",
+        "role": "Software Engineer",
+        "company": "Edcite Learning",
+        "industry": "EdTech & Interactive Assessments",
+        "period": "Dec 2013 - Jun 2015",
+        "location": "Bangalore, India",
+        "bullets": [
+          "Designed and maintained 5+ reusable assessment components for teacher-authoring and student-assessment workflows.",
+          "Engineered drag-and-drop, graph manipulation, live preview, and validation functionality using JavaScript and jQuery.",
+          "Delivered reusable, configurable assessment experiences in collaboration with product and design teams."
+        ],
+        "outcome": "Built interactive assessment widgets (drag-and-drop, graph plotting) powering teacher workflows and student evaluations.",
+        "skills": [
+          "JavaScript",
+          "jQuery",
+          "Interactive Graphing",
+          "Drag-and-Drop",
+          "EdTech"
+        ]
+      }
+    ],
+    "education": {
+      "title": "Education",
+      "degree": "Diploma in Computer Science",
+      "institution": "SNM Polytechnic, Moodbidri, Karnataka",
+      "year": "2011"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        {
+          "name": "CutShort Certified JavaScript - Advanced",
+          "issuer": "CutShort",
+          "date": "Jan 2020"
+        },
+        {
+          "name": "CutShort Certified HTML/CSS - Basic",
+          "issuer": "CutShort",
+          "date": "Jan 2020"
+        },
+        {
+          "name": "Designing Websites for Performance",
+          "issuer": "LinkedIn Learning",
+          "date": "Jul 2019"
+        },
+        {
+          "name": "Learning Functional Programming with JavaScript",
+          "issuer": "LinkedIn Learning",
+          "date": "Aug 2018"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to see detailed project case studies?",
+      "text": "Explore the architectural challenges, technical solutions, and quantifiable impacts of my major enterprise projects.",
+      "caseStudiesBtn": "View Case Studies",
+      "capabilitiesBtn": "Explore Capabilities",
+      "contactBtn": "Get in Touch"
     }
+  }
 }
