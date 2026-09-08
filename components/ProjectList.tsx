@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { getDictionary, type Locale } from "../app/[lang]/dictionaries";
+import { getDictionary, type Locale } from "@/lib/dictionaries";
 import styles from "./ProjectList.module.css";
 
 interface ProjectListProps {

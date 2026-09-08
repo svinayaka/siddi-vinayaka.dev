@@ -1,12 +1,29 @@
 import { notFound } from "next/navigation";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileMenu from "@/components/Menu";
 import ProjectList from "@/components/ProjectList";
-import { hasLocale } from "./dictionaries";
+import ContactFormMFE from "@/mfe-components/contact-form";
+import { hasLocale } from "@/lib/dictionaries";
 import styles from "./page.module.scss";
-import ContactFormMFE from '../../mfe-components/contact-form';
+
+type Props = {
+  params: Promise<{ lang: string }>;
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { lang } = await params;
+
+  return {
+    title: `Portfolio (${lang.toUpperCase()})`,
+    description: "10+ years of experience in React, Angular, Micro Frontends, and Design Systems.",
+  };
+}
 
 export default async function Portfolio({
   params,

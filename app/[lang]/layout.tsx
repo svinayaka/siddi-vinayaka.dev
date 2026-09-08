@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { i18n, RTL_LOCALES } from "@/lib/i18n";
 import "./globals.css";
 import styles from "./layout.module.css";
-
-const RTL_LOCALES = new Set(["ar", "he", "fa", "ur"]);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }];
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
 export default async function RootLayout({
