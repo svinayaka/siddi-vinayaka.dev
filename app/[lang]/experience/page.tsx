@@ -33,7 +33,7 @@ export default async function ExperiencePage({
       role: "Senior Software Engineer",
       company: "PowerSchool Group LLC",
       industry: "EdTech (500K+ Users)",
-      period: "Mar 2023 – Dec 2025",
+      period: "Mar 2023 - Dec 2025",
       location: "Bangalore, India",
       bullets: [
         "Designed and maintained 60+ framework-agnostic Web Components for an enterprise Design System adopted by multiple engineering teams across React and Angular applications.",
@@ -60,7 +60,7 @@ export default async function ExperiencePage({
       role: "Senior Software Engineer (UI)",
       company: "OneTrust",
       industry: "Enterprise Privacy & Governance",
-      period: "Dec 2020 – Mar 2023",
+      period: "Dec 2020 - Mar 2023",
       location: "Bangalore, India",
       bullets: [
         "Led migration toward a Micro Frontend architecture by developing a shared Angular library published as versioned npm packages and adopted across multiple internal product modules.",
@@ -88,7 +88,7 @@ export default async function ExperiencePage({
       role: "Software Engineer",
       company: "Baker Hughes",
       industry: "Energy & Industrial IoT",
-      period: "Aug 2018 – Nov 2020",
+      period: "Aug 2018 - Nov 2020",
       location: "Bangalore, India",
       bullets: [
         "Built reusable React and Angular dashboard components driven by backend-managed JSON contracts, enabling multiple teams to render operational views consistently.",
@@ -114,7 +114,7 @@ export default async function ExperiencePage({
       role: "Software Engineer",
       company: "Time Inc.",
       industry: "Media & Digital Publishing",
-      period: "Apr 2017 – Aug 2018",
+      period: "Apr 2017 - Aug 2018",
       location: "Bangalore, India",
       bullets: [
         "Modernized a legacy Silverlight administration application by migrating its UI to Angular with Kendo UI.",
@@ -138,7 +138,7 @@ export default async function ExperiencePage({
       role: "Software Engineer",
       company: "Mphasis (Client: Schneider Electric)",
       industry: "Energy Management & Product Config",
-      period: "Jun 2016 – Apr 2017",
+      period: "Jun 2016 - Apr 2017",
       location: "Bangalore, India",
       bullets: [
         "Developed a region-aware AngularJS application for product configuration, supporting global product rules and configurable frontend behavior.",
@@ -163,7 +163,7 @@ export default async function ExperiencePage({
       role: "Software Engineer",
       company: "Spire Technologies",
       industry: "Talent Intelligence & Search",
-      period: "Dec 2015 – Jun 2016",
+      period: "Dec 2015 - Jun 2016",
       location: "Bangalore, India",
       bullets: [
         "Created an interactive D3.js skill-relationship visualization that helped recruiters compare related skills and identify stronger or weaker candidate matches.",
@@ -184,7 +184,7 @@ export default async function ExperiencePage({
       role: "Software Engineer",
       company: "Edcite Learning",
       industry: "EdTech & Interactive Assessments",
-      period: "Dec 2013 – Jun 2015",
+      period: "Dec 2013 - Jun 2015",
       location: "Bangalore, India",
       bullets: [
         "Designed and maintained 5+ reusable assessment components for teacher-authoring and student-assessment workflows.",
