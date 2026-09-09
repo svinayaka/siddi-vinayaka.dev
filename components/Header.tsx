@@ -28,7 +28,7 @@ export default function Header({ children, lang = "en" }: Readonly<{ children?: 
           </Link>
           <div>
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               download
               className={styles.btnResume}
             >
