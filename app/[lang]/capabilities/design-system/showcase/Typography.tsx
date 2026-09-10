@@ -1,22 +1,91 @@
+import {
+  FontSans,
+  FontDisplay,
+  FontMono,
+  FontSerif,
+  Text2xs,
+  TextXs,
+  TextSm,
+  TextBase,
+  TextLg,
+  TextXl,
+  Text2xl,
+  Text3xl,
+  Text4xl,
+  Text5xl,
+  Text6xl,
+  Text7xl,
+  FontWeightLight,
+  FontWeightRegular,
+  FontWeightMedium,
+  FontWeightSemibold,
+  FontWeightBold,
+  FontWeightExtrabold,
+  FontWeightBlack,
+  LeadingNone,
+  LeadingTight,
+  LeadingSnug,
+  LeadingNormal,
+  LeadingRelaxed,
+  LeadingLoose,
+  TrackingTighter,
+  TrackingTight,
+  TrackingNormal,
+  TrackingWide,
+  TrackingWider,
+  TrackingWidest,
+} from '@svinayaka/siddi-design-system/tokens';
 import styles from './Typography.module.scss';
 
-const SIZES = ['2xs', 'xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl'];
-
-const WEIGHTS = [
-  'light',
-  'regular',
-  'medium',
-  'semibold',
-  'bold',
-  'extrabold',
-  'black',
+const FAMILIES = [
+  { name: 'sans', value: FontSans },
+  { name: 'display', value: FontDisplay },
+  { name: 'mono', value: FontMono },
+  { name: 'serif', value: FontSerif },
 ] as const;
 
-const FAMILIES = ['sans', 'display', 'mono', 'serif'];
+const SIZES = [
+  { name: '2xs', value: Text2xs },
+  { name: 'xs', value: TextXs },
+  { name: 'sm', value: TextSm },
+  { name: 'base', value: TextBase },
+  { name: 'lg', value: TextLg },
+  { name: 'xl', value: TextXl },
+  { name: '2xl', value: Text2xl },
+  { name: '3xl', value: Text3xl },
+  { name: '4xl', value: Text4xl },
+  { name: '5xl', value: Text5xl },
+  { name: '6xl', value: Text6xl },
+  { name: '7xl', value: Text7xl },
+] as const;
 
-const LEADING = ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'];
+const WEIGHTS = [
+  { name: 'light', value: FontWeightLight },
+  { name: 'regular', value: FontWeightRegular },
+  { name: 'medium', value: FontWeightMedium },
+  { name: 'semibold', value: FontWeightSemibold },
+  { name: 'bold', value: FontWeightBold },
+  { name: 'extrabold', value: FontWeightExtrabold },
+  { name: 'black', value: FontWeightBlack },
+] as const;
 
-const TRACKING = ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'];
+const LEADING = [
+  { name: 'none', value: LeadingNone },
+  { name: 'tight', value: LeadingTight },
+  { name: 'snug', value: LeadingSnug },
+  { name: 'normal', value: LeadingNormal },
+  { name: 'relaxed', value: LeadingRelaxed },
+  { name: 'loose', value: LeadingLoose },
+] as const;
+
+const TRACKING = [
+  { name: 'tighter', value: TrackingTighter },
+  { name: 'tight', value: TrackingTight },
+  { name: 'normal', value: TrackingNormal },
+  { name: 'wide', value: TrackingWide },
+  { name: 'wider', value: TrackingWider },
+  { name: 'widest', value: TrackingWidest },
+] as const;
 
 export function Typography() {
   return (
@@ -32,14 +101,14 @@ export function Typography() {
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Families</span>
         {FAMILIES.map((family) => (
-          <div key={family} className={styles.typeRow}>
-            <div className={styles.typeMeta}>font-{family}</div>
+          <div key={family.name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>font-{family.name}</div>
             <div
+              className={`${styles.typePreview} ${styles.familySample}`}
               style={{
-                fontFamily: `var(--ksv-ds-font-${family})`,
-                fontSize: 'var(--ksv-ds-text-xl)',
-                color: 'var(--ksv-ds-text-primary)',
+                fontFamily: `var(--ksv-ds-font-${family.name})`,
               }}
+              title={family.value}
             >
               The quick brown fox jumps over the lazy dog.
             </div>
@@ -50,14 +119,14 @@ export function Typography() {
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Sizes</span>
         {SIZES.map((size) => (
-          <div key={size} className={styles.typeRow}>
-            <div className={styles.typeMeta}>text-{size}</div>
+          <div key={size.name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>text-{size.name}</div>
             <div
+              className={`${styles.typePreview} ${styles.sizeSample}`}
               style={{
-                fontSize: `var(--ksv-ds-text-${size})`,
-                color: 'var(--ksv-ds-text-primary)',
-                lineHeight: 'var(--ksv-ds-leading-tight)',
+                fontSize: `var(--ksv-ds-text-${size.name})`,
               }}
+              title={size.value}
             >
               Design tokens
             </div>
@@ -68,14 +137,14 @@ export function Typography() {
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Weights</span>
         {WEIGHTS.map((weight) => (
-          <div key={weight} className={styles.typeRow}>
-            <div className={styles.typeMeta}>font-weight-{weight}</div>
+          <div key={weight.name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>font-weight-{weight.name}</div>
             <div
+              className={`${styles.typePreview} ${styles.weightSample}`}
               style={{
-                fontWeight: `var(--ksv-ds-font-weight-${weight})`,
-                fontSize: 'var(--ksv-ds-text-lg)',
-                color: 'var(--ksv-ds-text-primary)',
+                fontWeight: `var(--ksv-ds-font-weight-${weight.name})`,
               }}
+              title={String(weight.value)}
             >
               The quick brown fox
             </div>
@@ -85,15 +154,15 @@ export function Typography() {
 
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Leading</span>
-        {LEADING.map((name) => (
-          <div key={name} className={styles.typeRow}>
-            <div className={styles.typeMeta}>leading-{name}</div>
+        {LEADING.map((leading) => (
+          <div key={leading.name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>leading-{leading.name}</div>
             <div
+              className={`${styles.typePreview} ${styles.leadingSample}`}
               style={{
-                lineHeight: `var(--ksv-ds-leading-${name})`,
-                color: 'var(--ksv-ds-text-primary)',
-                maxWidth: '40ch',
+                lineHeight: `var(--ksv-ds-leading-${leading.name})`,
               }}
+              title={String(leading.value)}
             >
               Line-height is one of the most overlooked typographic decisions.
               A well-chosen leading ratio makes body text readable at every size.
@@ -104,15 +173,15 @@ export function Typography() {
 
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Tracking</span>
-        {TRACKING.map((name) => (
-          <div key={name} className={styles.typeRow}>
-            <div className={styles.typeMeta}>tracking-{name}</div>
+        {TRACKING.map((tracking) => (
+          <div key={tracking.name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>tracking-{tracking.name}</div>
             <div
+              className={`${styles.typePreview} ${styles.trackingSample}`}
               style={{
-                letterSpacing: `var(--ksv-ds-tracking-${name})`,
-                fontSize: 'var(--ksv-ds-text-base)',
-                color: 'var(--ksv-ds-text-primary)',
+                letterSpacing: `var(--ksv-ds-tracking-${tracking.name})`,
               }}
+              title={tracking.value}
             >
               Letter spacing and optical kerning tokens.
             </div>

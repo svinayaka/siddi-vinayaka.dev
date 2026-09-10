@@ -1,6 +1,23 @@
+import {
+  ShadowXs,
+  ShadowSm,
+  ShadowMd,
+  ShadowLg,
+  ShadowXl,
+  Shadow2xl,
+  ShadowInner,
+} from '@svinayaka/siddi-design-system/tokens';
 import styles from './Shadows.module.scss';
 
-const SHADOWS = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', 'inner'];
+const SHADOWS = [
+  { name: 'xs', value: ShadowXs },
+  { name: 'sm', value: ShadowSm },
+  { name: 'md', value: ShadowMd },
+  { name: 'lg', value: ShadowLg },
+  { name: 'xl', value: ShadowXl },
+  { name: '2xl', value: Shadow2xl },
+  { name: 'inner', value: ShadowInner },
+] as const;
 
 export function Shadows() {
   return (
@@ -15,14 +32,15 @@ export function Shadows() {
 
       <div className={styles.shadowGrid}>
         {SHADOWS.map((shadow) => (
-          <div key={shadow} className={styles.shadowCell}>
+          <div key={shadow.name} className={styles.shadowCell}>
             <div className={styles.shadowStage}>
               <div
                 className={styles.shadowBox}
-                style={{ boxShadow: `var(--ksv-ds-shadow-${shadow})` }}
+                style={{ boxShadow: `var(--ksv-ds-shadow-${shadow.name})` }}
+                title={shadow.value}
               />
             </div>
-            <code className={styles.shadowMeta}>shadow-{shadow}</code>
+            <code className={styles.shadowMeta}>shadow-{shadow.name}</code>
           </div>
         ))}
       </div>

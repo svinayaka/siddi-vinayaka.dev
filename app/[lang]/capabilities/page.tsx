@@ -8,6 +8,12 @@ const CAPABILITIES = [
         description:
             'A token-driven design system compiled from JSON, published as an npm package, and consumed via CSS variables with live theme switching.',
     },
+    {
+        slug: 'accessibility',
+        title: 'Web Accessibility & VPAT Compliance',
+        description:
+            'Enterprise WCAG 2.1 AA audits, token contrast guarantees, automated a11y testing with axe-core & Playwright, and verifiable VPAT remediation.',
+    },
 ];
 
 export default async function CapabilitiesPage({

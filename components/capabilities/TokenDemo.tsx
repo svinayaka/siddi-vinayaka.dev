@@ -37,9 +37,27 @@ export function TokenDemo() {
     const [radius, setRadius] = useState('RadiusLg');
 
     useEffect(() => {
-        if (window.matchMedia?.('(prefers-color-scheme: dark)')?.matches) {
-            setTheme('dark');
-        }
+        const mediaQuery = window.matchMedia?.('(prefers-color-scheme: dark)');
+        if (!mediaQuery) return;
+
+        const updateTheme = (matches: boolean) => {
+            if (matches) {
+                setTheme('dark');
+            }
+        };
+
+        const handleChange = (e: MediaQueryListEvent) => {
+            updateTheme(e.matches);
+        };
+
+        queueMicrotask(() => {
+            updateTheme(mediaQuery.matches);
+        });
+
+        mediaQuery.addEventListener?.('change', handleChange);
+        return () => {
+            mediaQuery.removeEventListener?.('change', handleChange);
+        };
     }, []);
 
     useEffect(() => {

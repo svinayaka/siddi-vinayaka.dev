@@ -57,3 +57,27 @@
   color: var(--ksv-ds-text-muted);
   line-height: var(--ksv-ds-leading-normal);
 }
+
+.typePreview {
+  color: var(--ksv-ds-text-primary);
+}
+
+.familySample {
+  font-size: var(--ksv-ds-text-xl);
+}
+
+.sizeSample {
+  line-height: var(--ksv-ds-leading-tight);
+}
+
+.weightSample {
+  font-size: var(--ksv-ds-text-lg);
+}
+
+.leadingSample {
+  max-width: 40ch;
+}
+
+.trackingSample {
+  font-size: var(--ksv-ds-text-base);
+}
