@@ -195,7 +195,7 @@ export default async function ExperiencePage({
         </section>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

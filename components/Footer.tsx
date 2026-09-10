@@ -1,6 +1,13 @@
+'use client';
+
+import Link from 'next/link';
 import styles from './Footer.module.scss';
 
-export default function Footer() {
+export default function Footer({ lang = 'en' }: Readonly<{ lang?: string }>) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footerContent}>
@@ -13,36 +20,29 @@ export default function Footer() {
           </p>
         </div>
 
-        <ul className={styles.links}>
-          <li className={styles.linkItem}>
-            <a
-              href="https://www.linkedin.com/in/siddhivinayaka"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li className={styles.linkItem}>
-            <a
-              href="https://github.com/svinayaka"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              GitHub
-            </a>
-          </li>
-          <li className={styles.linkItem}>
-            <a
-              href="mailto:svinayaka290489@gmail.com"
-              aria-label="Send Email"
-            >
-              Email
-            </a>
-          </li>
-        </ul>
+        <nav className={styles.footerNav} aria-label="Footer Navigation">
+          <ul className={styles.links}>
+            <li className={styles.linkItem}>
+              <Link href={`/${lang}/capabilities`}>Capabilities</Link>
+            </li>
+            <li className={styles.linkItem}>
+              <Link href={`/${lang}/case-studies`}>Case Studies</Link>
+            </li>
+            <li className={styles.linkItem}>
+              <Link href={`/${lang}/experience`}>Experience</Link>
+            </li>
+            <li className={styles.linkItem}>
+              <button
+                type="button"
+                onClick={scrollToTop}
+                className={styles.backToTopBtn}
+                aria-label="Scroll back to top of page"
+              >
+                Back to top &uarr;
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

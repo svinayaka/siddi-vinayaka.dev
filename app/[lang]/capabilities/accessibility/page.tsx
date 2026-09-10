@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 import { AccessibilityDemo } from '@/components/capabilities/AccessibilityDemo';
 import styles from './page.module.scss';
 
@@ -10,12 +11,13 @@ export default async function AccessibilityPage({
   const { lang } = await params;
 
   return (
-    <main className={styles.accessibilityPage}>
-      <div>
-        <Link href={`/${lang}/capabilities`} className={styles.backLink}>
-          &larr; Back to Capabilities
-        </Link>
-      </div>
+    <div className={styles.pageContainer}>
+      <main className={styles.accessibilityPage}>
+        <div>
+          <Link href={`/${lang}/capabilities`} className={styles.backLink}>
+            &larr; Back to Capabilities
+          </Link>
+        </div>
 
       {/* Hero */}
       <section className={styles.section}>
@@ -165,5 +167,7 @@ export default async function AccessibilityPage({
         </div>
       </section>
     </main>
-  );
+    <Footer lang={lang} />
+  </div>
+);
 }

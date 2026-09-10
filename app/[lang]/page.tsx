@@ -216,7 +216,7 @@ export default async function Portfolio({
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

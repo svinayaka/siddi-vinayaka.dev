@@ -102,7 +102,7 @@ export default async function CaseStudies({
         </div>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

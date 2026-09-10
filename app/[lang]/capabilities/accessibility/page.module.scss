@@ -1,9 +1,18 @@
 @use '@/styles/tokens/breakpoints' as *;
 
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .accessibilityPage {
+  flex: 1;
   display: grid;
   gap: var(--ksv-ds-space-16);
   max-width: 64rem;
+  width: 100%;
   margin: 0 auto;
   padding: var(--ksv-ds-space-12) var(--ksv-ds-space-4);
   color: var(--ksv-ds-text-primary);

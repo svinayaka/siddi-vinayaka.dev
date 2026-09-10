@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 import { TokenDemo } from '@/components/capabilities/TokenDemo';
 import { ColorScales } from './showcase/ColorScales';
 import { SemanticColors } from './showcase/SemanticColors';
@@ -18,12 +19,13 @@ export default async function DesignSystemPage({
   const { lang } = await params;
 
   return (
-    <main className={styles.designSystemPage}>
-      <div>
-        <Link href={`/${lang}/capabilities`} className={styles.backLink}>
-          &larr; Back to Capabilities
-        </Link>
-      </div>
+    <div className={styles.pageContainer}>
+      <main className={styles.designSystemPage}>
+        <div>
+          <Link href={`/${lang}/capabilities`} className={styles.backLink}>
+            &larr; Back to Capabilities
+          </Link>
+        </div>
 
       {/* Hero */}
       <section className={styles.section}>
@@ -205,5 +207,7 @@ export default async function DesignSystemPage({
         </ul>
       </section>
     </main>
-  );
+    <Footer lang={lang} />
+  </div>
+);
 }
