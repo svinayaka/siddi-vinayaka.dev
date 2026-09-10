@@ -11,7 +11,7 @@
   flex: 1;
   display: grid;
   gap: var(--ksv-ds-space-16);
-  max-width: 64rem;
+  max-width: var(--ksv-ds-container-lg);
   width: 100%;
   margin: 0 auto;
   padding: var(--ksv-ds-space-12) var(--ksv-ds-space-4);
@@ -89,7 +89,7 @@
   font-size: var(--ksv-ds-text-lg);
   line-height: var(--ksv-ds-leading-relaxed);
   color: var(--ksv-ds-text-secondary);
-  max-width: 60ch;
+  max-width: var(--ksv-ds-container-sm);
   margin: 0;
 }
 

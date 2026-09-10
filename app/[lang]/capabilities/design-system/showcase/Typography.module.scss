@@ -75,7 +75,7 @@
 }
 
 .leadingSample {
-  max-width: 40ch;
+  max-width: var(--ksv-ds-container-xs);
 }
 
 .trackingSample {

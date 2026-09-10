@@ -8,122 +8,115 @@
 .menuToggle {
   background: transparent;
   border: none;
-  color: var(--foreground);
-  opacity: 0.8;
-  padding: var(--spacing-xs);
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  color: var(--ksv-ds-text-primary);
+  opacity: 0.85;
+  padding: var(--ksv-ds-space-1);
+  border-radius: var(--ksv-ds-radius-md);
+  transition:
+    color var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default),
+    opacity var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default),
+    background-color var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    color: var(--primary);
+    color: var(--ksv-ds-text-brand);
     opacity: 1;
+    background-color: var(--ksv-ds-bg-subtle);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ksv-ds-border-focus);
+    outline-offset: 2px;
   }
 }
 
 .menuIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--ksv-ds-space-6);
+  height: var(--ksv-ds-space-6);
 }
 
 .menuDropdown {
   position: absolute;
   inset-inline-end: 0;
   top: 100%;
-  margin-top: var(--spacing-xs);
-  width: 12rem;
-  background-color: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  padding: var(--spacing-sm);
-  z-index: 50;
+  margin-top: var(--ksv-ds-space-2);
+  width: calc(var(--ksv-ds-space-24) * 2);
+  background-color: var(--ksv-ds-bg-surface);
+  border: 1px solid var(--ksv-ds-border-subtle);
+  border-radius: var(--ksv-ds-radius-xl);
+  box-shadow: var(--ksv-ds-shadow-lg);
+  padding: var(--ksv-ds-space-2);
+  z-index: var(--ksv-ds-z-dropdown);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2xs);
+  gap: var(--ksv-ds-space-1);
 }
 
 .desktopMenuLinks {
   display: none;
-  /* Hide on mobile viewports */
 }
 
 .desktopMenuLink {
   text-decoration: none;
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-medium);
-  color: var(--foreground);
-  opacity: 0.8;
-  transition: all 0.2s ease;
+  font-family: var(--ksv-ds-font-sans, inherit);
+  font-size: var(--ksv-ds-text-sm);
+  font-weight: var(--ksv-ds-font-weight-medium);
+  color: var(--ksv-ds-text-primary);
+  opacity: 0.85;
+  transition:
+    color var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default),
+    opacity var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default);
 
   &:hover {
-    color: var(--primary);
+    color: var(--ksv-ds-text-brand);
     opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ksv-ds-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--ksv-ds-radius-xs);
   }
 }
 
 .mobileMenuLink {
   display: block;
-  padding: 8px 12px;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  padding: var(--ksv-ds-space-2) var(--ksv-ds-space-3);
+  font-family: var(--ksv-ds-font-sans, inherit);
+  font-size: var(--ksv-ds-text-sm);
+  font-weight: var(--ksv-ds-font-weight-medium);
   text-decoration: none;
-  color: var(--foreground);
-  opacity: 0.8;
-  border-radius: 8px;
-  transition: all 0.2s ease;
+  color: var(--ksv-ds-text-primary);
+  opacity: 0.85;
+  border-radius: var(--ksv-ds-radius-md);
+  transition: all var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default);
 
   &:hover {
-    color: var(--primary);
+    color: var(--ksv-ds-text-brand);
     opacity: 1;
-    background-color: #f9fafb;
+    background-color: var(--ksv-ds-bg-subtle);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ksv-ds-border-focus);
+    outline-offset: 2px;
   }
 }
 
-/* Responsiveness overrides using SCSS Breakpoint Token Mixin */
+/* Breakpoint Overrides */
 @include respond-to('md') {
   .menuWrapper {
     display: none;
-    /* Hide mobile dropdown burger wrapper on desktop */
   }
 
   .desktopMenuLinks {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--ksv-ds-space-5);
     align-items: center;
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-    color: var(--foreground);
-    opacity: 0.8;
-    transition: all 0.2s ease;
-    border-left: 1px solid var(--border);
-    padding: 20px 40px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .menuToggle:hover {
-    color: var(--primary-dark);
-  }
-
-  .menuDropdown {
-    background-color: #0b0f19;
-    border-color: var(--border-dark);
-  }
-
-  .desktopMenuLinks {
-    border-left-color: var(--border-dark);
-  }
-
-  .desktopMenuLink:hover {
-    color: var(--primary-dark);
-  }
-
-  .mobileMenuLink:hover {
-    color: var(--primary-dark);
-    background-color: rgba(31, 41, 55, 0.5);
+    border-left: 1px solid var(--ksv-ds-border-subtle);
+    padding-left: var(--ksv-ds-space-6);
   }
 }

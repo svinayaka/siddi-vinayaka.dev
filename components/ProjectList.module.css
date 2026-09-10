@@ -2,14 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--spacing-sm);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--primary);
-}
-
-@media (prefers-color-scheme: dark) {
-  .heroTags {
-    color: var(--primary-dark);
-  }
+  gap: var(--ksv-ds-space-2);
+  font-family: var(--ksv-ds-font-mono, monospace);
+  font-size: var(--ksv-ds-text-sm);
+  font-weight: var(--ksv-ds-font-weight-medium);
+  color: var(--ksv-ds-text-brand);
 }
