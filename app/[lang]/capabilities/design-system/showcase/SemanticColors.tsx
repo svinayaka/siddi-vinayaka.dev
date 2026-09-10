@@ -1,4 +1,4 @@
-import styles from './Showcase.module.scss';
+import styles from './SemanticColors.module.scss';
 
 const GROUPS: { title: string; tokens: string[] }[] = [
   {

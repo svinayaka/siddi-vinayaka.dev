@@ -14,44 +14,59 @@ import {
 } from '@svinayaka/siddi-design-system/tokens';
 import styles from './TokenDemo.module.scss';
 
-const BRANDS: Record<string, string> = {
-    indigo: InteractivePrimary,
-    cyan: InteractiveAccent,
-    emerald: ColorSuccess600,
-    rose: InteractiveDanger,
-    amber: ColorWarning600,
+const BRANDS: Record<string, { label: string; value: string }> = {
+    InteractivePrimary: { label: 'InteractivePrimary (#4f46e5)', value: InteractivePrimary },
+    InteractiveAccent: { label: 'InteractiveAccent (#0891b2)', value: InteractiveAccent },
+    ColorSuccess600: { label: 'ColorSuccess600 (#059669)', value: ColorSuccess600 },
+    InteractiveDanger: { label: 'InteractiveDanger (#e11d48)', value: InteractiveDanger },
+    ColorWarning600: { label: 'ColorWarning600 (#d97706)', value: ColorWarning600 },
 };
 
-const RADII: Record<string, string> = {
-    sharp: RadiusXs,
-    soft: RadiusLg,
-    round: RadiusXl,
-    pill: RadiusFull,
+const RADII: Record<string, { label: string; value: string }> = {
+    RadiusXs: { label: 'RadiusXs (0.125rem)', value: RadiusXs },
+    RadiusLg: { label: 'RadiusLg (0.5rem)', value: RadiusLg },
+    RadiusXl: { label: 'RadiusXl (0.75rem)', value: RadiusXl },
+    RadiusFull: { label: 'RadiusFull (9999px)', value: RadiusFull },
 };
 
 type Theme = 'light' | 'dark';
 
 export function TokenDemo() {
     const [theme, setTheme] = useState<Theme>('light');
-    const [brand, setBrand] = useState('indigo');
-    const [radius, setRadius] = useState('soft');
+    const [brand, setBrand] = useState('InteractivePrimary');
+    const [radius, setRadius] = useState('RadiusLg');
+
+    useEffect(() => {
+        if (window.matchMedia?.('(prefers-color-scheme: dark)')?.matches) {
+            setTheme('dark');
+        }
+    }, []);
 
     useEffect(() => {
         document.documentElement.dataset.ksvDsTheme = theme;
+        return () => {
+            delete document.documentElement.dataset.ksvDsTheme;
+        };
     }, [theme]);
 
     useEffect(() => {
         document.documentElement.style.setProperty(
             '--ksv-ds-interactive-primary',
-            BRANDS[brand]
+            BRANDS[brand].value
         );
+        return () => {
+            document.documentElement.style.removeProperty('--ksv-ds-interactive-primary');
+        };
     }, [brand]);
 
     useEffect(() => {
         document.documentElement.style.setProperty(
             '--ksv-ds-radius-demo',
-            RADII[radius]
+            RADII[radius].value
         );
+        return () => {
+            document.documentElement.style.removeProperty('--ksv-ds-radius-demo');
+        };
     }, [radius]);
 
     return (
@@ -60,25 +75,25 @@ export function TokenDemo() {
                 <label className={styles['control']}>
                     <span>Theme</span>
                     <select value={theme} onChange={(e) => setTheme(e.target.value as Theme)}>
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
+                        <option value="light">Light Mode</option>
+                        <option value="dark">Dark Mode</option>
                     </select>
                 </label>
 
                 <label className={styles['control']}>
-                    <span>Brand</span>
+                    <span>Brand Token</span>
                     <select value={brand} onChange={(e) => setBrand(e.target.value)}>
-                        {Object.keys(BRANDS).map((k) => (
-                            <option key={k} value={k}>{k}</option>
+                        {Object.entries(BRANDS).map(([key, item]) => (
+                            <option key={key} value={key}>{item.label}</option>
                         ))}
                     </select>
                 </label>
 
                 <label className={styles['control']}>
-                    <span>Radius</span>
+                    <span>Radius Token</span>
                     <select value={radius} onChange={(e) => setRadius(e.target.value)}>
-                        {Object.keys(RADII).map((k) => (
-                            <option key={k} value={k}>{k}</option>
+                        {Object.entries(RADII).map(([key, item]) => (
+                            <option key={key} value={key}>{item.label}</option>
                         ))}
                     </select>
                 </label>
@@ -103,12 +118,12 @@ export function TokenDemo() {
             <div className={styles['tokens']}>
                 <div className={styles['tokenRow']}>
                     <code>--ksv-ds-interactive-primary</code>
-                    <span style={{ background: BRANDS[brand] }} className={styles['swatch']} />
-                    <code>{BRANDS[brand]}</code>
+                    <span style={{ background: BRANDS[brand].value }} className={styles['swatch']} />
+                    <code>{brand} ({BRANDS[brand].value})</code>
                 </div>
                 <div className={styles['tokenRow']}>
                     <code>--ksv-ds-radius-demo</code>
-                    <code>{RADII[radius]}</code>
+                    <code>{radius} ({RADII[radius].value})</code>
                 </div>
                 <div className={styles['tokenRow']}>
                     <code>data-ksv-ds-theme</code>

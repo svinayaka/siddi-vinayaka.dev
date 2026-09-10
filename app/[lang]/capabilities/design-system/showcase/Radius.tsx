@@ -1,4 +1,4 @@
-import styles from './Showcase.module.scss';
+import styles from './Radius.module.scss';
 
 const RADII = ['none', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', 'full'];
 

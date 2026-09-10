@@ -1,4 +1,4 @@
-import styles from './Showcase.module.scss';
+import styles from './Spacing.module.scss';
 
 const SPACES = ['0', '1', '2', '3', '4', '5', '6', '8', '10', '12', '16', '20', '24', '32'];
 

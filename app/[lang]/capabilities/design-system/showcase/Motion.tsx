@@ -1,4 +1,4 @@
-import styles from './Showcase.module.scss';
+import styles from './Motion.module.scss';
 
 const EASINGS = ['default', 'in', 'out', 'in-out', 'spring'];
 const DURATIONS = ['fast', 'normal', 'slow', 'slower'];

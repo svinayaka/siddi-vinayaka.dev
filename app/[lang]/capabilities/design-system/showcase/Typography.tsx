@@ -1,20 +1,22 @@
-import styles from './Showcase.module.scss';
+import styles from './Typography.module.scss';
 
 const SIZES = ['2xs', 'xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl'];
 
 const WEIGHTS = [
-  ['light', 300],
-  ['regular', 400],
-  ['medium', 500],
-  ['semibold', 600],
-  ['bold', 700],
-  ['extrabold', 800],
-  ['black', 900],
+  'light',
+  'regular',
+  'medium',
+  'semibold',
+  'bold',
+  'extrabold',
+  'black',
 ] as const;
 
 const FAMILIES = ['sans', 'display', 'mono', 'serif'];
 
 const LEADING = ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'];
+
+const TRACKING = ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'];
 
 export function Typography() {
   return (
@@ -22,8 +24,8 @@ export function Typography() {
       <header className={styles.sectionHeader}>
         <h2>Typography</h2>
         <p>
-          Font families, a 12-step size scale, 7 weights, and 6 line-height
-          ratios — all consumed as tokens.
+          Font families, a 12-step size scale, 7 weights, 6 line-height
+          ratios, and 6 letter-spacing tokens — all consumed as tokens.
         </p>
       </header>
 
@@ -35,7 +37,7 @@ export function Typography() {
             <div
               style={{
                 fontFamily: `var(--ksv-ds-font-${family})`,
-                fontSize: '1.25rem',
+                fontSize: 'var(--ksv-ds-text-xl)',
                 color: 'var(--ksv-ds-text-primary)',
               }}
             >
@@ -54,7 +56,7 @@ export function Typography() {
               style={{
                 fontSize: `var(--ksv-ds-text-${size})`,
                 color: 'var(--ksv-ds-text-primary)',
-                lineHeight: 1.2,
+                lineHeight: 'var(--ksv-ds-leading-tight)',
               }}
             >
               Design tokens
@@ -65,13 +67,13 @@ export function Typography() {
 
       <div className={styles.scaleGroup}>
         <span className={styles.scaleLabel}>Weights</span>
-        {WEIGHTS.map(([name, value]) => (
-          <div key={name} className={styles.typeRow}>
-            <div className={styles.typeMeta}>font-weight-{name}</div>
+        {WEIGHTS.map((weight) => (
+          <div key={weight} className={styles.typeRow}>
+            <div className={styles.typeMeta}>font-weight-{weight}</div>
             <div
               style={{
-                fontWeight: value,
-                fontSize: '1.125rem',
+                fontWeight: `var(--ksv-ds-font-weight-${weight})`,
+                fontSize: 'var(--ksv-ds-text-lg)',
                 color: 'var(--ksv-ds-text-primary)',
               }}
             >
@@ -95,6 +97,24 @@ export function Typography() {
             >
               Line-height is one of the most overlooked typographic decisions.
               A well-chosen leading ratio makes body text readable at every size.
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.scaleGroup}>
+        <span className={styles.scaleLabel}>Tracking</span>
+        {TRACKING.map((name) => (
+          <div key={name} className={styles.typeRow}>
+            <div className={styles.typeMeta}>tracking-{name}</div>
+            <div
+              style={{
+                letterSpacing: `var(--ksv-ds-tracking-${name})`,
+                fontSize: 'var(--ksv-ds-text-base)',
+                color: 'var(--ksv-ds-text-primary)',
+              }}
+            >
+              Letter spacing and optical kerning tokens.
             </div>
           </div>
         ))}

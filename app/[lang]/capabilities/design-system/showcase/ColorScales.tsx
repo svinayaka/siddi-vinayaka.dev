@@ -1,4 +1,4 @@
-import styles from './Showcase.module.scss';
+import styles from './ColorScales.module.scss';
 
 const SCALES = [
   'neutral', 'primary', 'accent', 'success',
