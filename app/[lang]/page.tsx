@@ -145,27 +145,29 @@ export default async function Portfolio({
             {/* Paragraph 1: The Expertise */}
             <p>
               I am a Senior Front-End Engineer with <strong>10+ years of experience</strong>{" "}
-              building enterprise web platforms, reusable UI systems, and high-performance applications
-              across Media, Energy, and EdTech sectors. My core expertise lies in{" "}
-              <strong>React, TypeScript, Angular, and Micro Frontend architectures</strong>.
+              architecting enterprise web platforms,{" "}
+              <Link href={`/${lang}/capabilities/design-system`} className={styles.inlineLink}>
+                token-driven Design Systems
+              </Link>, and high-performance applications across Media, Energy, and EdTech sectors.
+              My core expertise lies in <strong>React, TypeScript, Angular, and Micro Frontend architectures</strong>.
             </p>
 
             {/* Paragraph 2: The Differentiator (The "Staff" Edge) */}
             <p>
               I specialize in modernizing monolithic legacy applications
-              (Silverlight → Angular, AngularJS → React) and architecting{" "}
-              <strong>metadata-driven rendering frameworks</strong> that decouple frontend UIs
-              from backend changes. I am also deeply committed to{" "}
-              <strong>accessibility (WCAG 2.1 AA) and performance optimization</strong>,
-              having led VPAT evaluations that improved accessibility scores from 78% to 94%.
+              (Silverlight &rarr; Angular, AngularJS &rarr; React) and architecting metadata-driven rendering
+              frameworks that decouple frontend UIs from backend releases. I am also deeply committed to{" "}
+              <Link href={`/${lang}/capabilities/accessibility`} className={styles.inlineLink}>
+                Web Accessibility (WCAG 2.1 AA)
+              </Link>{" "}
+              and performance optimization, having led VPAT evaluations that raised enterprise audit scores from <strong>78% to 94%</strong>.
             </p>
 
             {/* Paragraph 3: The Impact (Prove You Deliver) */}
             <p>
-              I have built platforms serving <strong>500K+ students</strong>, reduced manual
-              candidate evaluation time by <strong>60%</strong>, and increased testing coverage
-              from <strong>30% to 80%</strong>. I am currently exploring Senior/Staff roles
-              where I can drive architectural decisions and mentor engineering teams.
+              Across my career, I have delivered platforms serving <strong>500K+ students</strong>,
+              reduced manual candidate evaluation time by <strong>60%</strong>, and increased automated testing coverage
+              from <strong>30% to 80%</strong>. I am currently exploring Senior/Staff engineering roles where I can drive architectural decisions, establish UI standards, and mentor frontend teams.
             </p>
           </div>
         </section>

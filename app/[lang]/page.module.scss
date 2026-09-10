@@ -125,6 +125,24 @@
   color: var(--text-muted);
 }
 
+.inlineLink {
+  color: var(--ksv-ds-text-brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: var(--ksv-ds-font-weight-medium);
+  transition: color var(--ksv-ds-duration-fast) var(--ksv-ds-ease-default);
+
+  &:hover {
+    color: var(--ksv-ds-interactive-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ksv-ds-border-focus);
+    outline-offset: 2px;
+    border-radius: var(--ksv-ds-radius-xs);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .aboutContent {
     color: #d1d5db;
