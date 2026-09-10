@@ -1,11 +1,133 @@
 @layer tokens, themes, resets, base;
 
-@import "../../styles/tokens/breakpoints.css" layer(tokens);
-@import "../../styles/tokens/colors.css" layer(tokens);
-@import "../../styles/tokens/spacing.css" layer(tokens);
-@import "../../styles/tokens/typography.css" layer(tokens);
-@import "../../styles/themes/light.css" layer(themes);
-@import "../../styles/themes/dark.css" layer(themes);
+/* Design System Tokens */
+@import "@svinayaka/siddi-design-system/colors" layer(tokens);
+@import "@svinayaka/siddi-design-system/spacing" layer(tokens);
+@import "@svinayaka/siddi-design-system/typography" layer(tokens);
+@import "@svinayaka/siddi-design-system/breakpoints" layer(tokens);
+
+/* Design System Themes */
+@import "@svinayaka/siddi-design-system/light" layer(themes);
+@import "@svinayaka/siddi-design-system/dark" layer(themes);
+
+@layer tokens {
+  :root {
+    /* Legacy / Semantic Bridge Mappings to Design System Tokens */
+    --background: var(--ksv-ds-bg-canvas);
+    --foreground: var(--ksv-ds-text-primary);
+    --text-muted: var(--ksv-ds-text-secondary);
+
+    --primary: var(--ksv-ds-interactive-primary);
+    --primary-hover: var(--ksv-ds-interactive-primary-hover);
+    --primary-dark: var(--ksv-ds-text-brand);
+    --primary-dark-hover: var(--ksv-ds-text-link-hover);
+
+    --secondary: var(--ksv-ds-interactive-accent);
+    --secondary-hover: var(--ksv-ds-interactive-accent-hover);
+    --secondary-dark: var(--ksv-ds-interactive-accent);
+    --secondary-dark-hover: var(--ksv-ds-interactive-accent-hover);
+
+    --border: var(--ksv-ds-border-subtle);
+    --border-dark: var(--ksv-ds-border-strong);
+    --white: var(--ksv-ds-color-white);
+
+    /* Spacing Scale */
+    --spacing-2xs: 0.125rem;
+    --spacing-xs: var(--ksv-ds-space-1);
+    --spacing-sm: var(--ksv-ds-space-2);
+    --spacing-md: var(--ksv-ds-space-4);
+    --spacing-lg: var(--ksv-ds-space-6);
+    --spacing-xl: var(--ksv-ds-space-8);
+    --spacing-2xl: var(--ksv-ds-space-12);
+
+    /* Border Radii */
+    --radius-xs: var(--ksv-ds-radius-sm);
+    --radius-sm: var(--ksv-ds-radius-md);
+    --radius-md: var(--ksv-ds-radius-xl);
+    --radius-lg: var(--ksv-ds-radius-2xl);
+    --radius-full: var(--ksv-ds-radius-full);
+
+    /* Typographic Font Sizes */
+    --font-sans: var(--ksv-ds-font-sans);
+    --font-size-xs: var(--ksv-ds-text-xs);
+    --font-size-sm: var(--ksv-ds-text-sm);
+    --font-size-base: var(--ksv-ds-text-base);
+    --font-size-lg: var(--ksv-ds-text-lg);
+    --font-size-xl: var(--ksv-ds-text-xl);
+    --font-size-2xl: var(--ksv-ds-text-2xl);
+    --font-size-3xl: var(--ksv-ds-text-3xl);
+    --font-size-4xl: var(--ksv-ds-text-4xl);
+
+    /* Color Scale Bridge (Design System Namespace -> Legacy Aliases) */
+    --slate-50: var(--ksv-ds-color-slate-50);
+    --slate-100: var(--ksv-ds-color-slate-100);
+    --slate-200: var(--ksv-ds-color-slate-200);
+    --slate-300: var(--ksv-ds-color-slate-300);
+    --slate-400: var(--ksv-ds-color-slate-400);
+    --slate-500: var(--ksv-ds-color-slate-500);
+    --slate-600: var(--ksv-ds-color-slate-600);
+    --slate-700: var(--ksv-ds-color-slate-700);
+    --slate-800: var(--ksv-ds-color-slate-800);
+    --slate-900: var(--ksv-ds-color-slate-900);
+    --slate-950: var(--ksv-ds-color-slate-950);
+
+    --indigo-50: var(--ksv-ds-color-indigo-50);
+    --indigo-100: var(--ksv-ds-color-indigo-100);
+    --indigo-200: var(--ksv-ds-color-indigo-200);
+    --indigo-300: var(--ksv-ds-color-indigo-300);
+    --indigo-400: var(--ksv-ds-color-indigo-400);
+    --indigo-500: var(--ksv-ds-color-indigo-500);
+    --indigo-600: var(--ksv-ds-color-indigo-600);
+    --indigo-700: var(--ksv-ds-color-indigo-700);
+    --indigo-800: var(--ksv-ds-color-indigo-800);
+    --indigo-900: var(--ksv-ds-color-indigo-900);
+    --indigo-950: var(--ksv-ds-color-indigo-950);
+
+    --emerald-50: var(--ksv-ds-color-emerald-50);
+    --emerald-100: var(--ksv-ds-color-emerald-100);
+    --emerald-200: var(--ksv-ds-color-emerald-200);
+    --emerald-300: var(--ksv-ds-color-emerald-300);
+    --emerald-400: var(--ksv-ds-color-emerald-400);
+    --emerald-500: var(--ksv-ds-color-emerald-500);
+    --emerald-600: var(--ksv-ds-color-emerald-600);
+    --emerald-700: var(--ksv-ds-color-emerald-700);
+    --emerald-800: var(--ksv-ds-color-emerald-800);
+    --emerald-900: var(--ksv-ds-color-emerald-900);
+    --emerald-950: var(--ksv-ds-color-emerald-950);
+
+    --violet-50: var(--ksv-ds-color-violet-50);
+    --violet-100: var(--ksv-ds-color-violet-100);
+    --violet-200: var(--ksv-ds-color-violet-200);
+    --violet-300: var(--ksv-ds-color-violet-300);
+    --violet-400: var(--ksv-ds-color-violet-400);
+    --violet-500: var(--ksv-ds-color-violet-500);
+    --violet-600: var(--ksv-ds-color-violet-600);
+    --violet-700: var(--ksv-ds-color-violet-700);
+    --violet-800: var(--ksv-ds-color-violet-800);
+    --violet-900: var(--ksv-ds-color-violet-900);
+    --violet-950: var(--ksv-ds-color-violet-950);
+
+    --amber-50: var(--ksv-ds-color-amber-50);
+    --amber-100: var(--ksv-ds-color-amber-100);
+    --amber-200: var(--ksv-ds-color-amber-200);
+    --amber-300: var(--ksv-ds-color-amber-300);
+    --amber-400: var(--ksv-ds-color-amber-400);
+    --amber-500: var(--ksv-ds-color-amber-500);
+    --amber-600: var(--ksv-ds-color-amber-600);
+    --amber-700: var(--ksv-ds-color-amber-700);
+    --amber-800: var(--ksv-ds-color-amber-800);
+    --amber-900: var(--ksv-ds-color-amber-900);
+    --amber-950: var(--ksv-ds-color-amber-950);
+
+    /* Typographic Font Weights */
+    --font-weight-light: var(--ksv-ds-font-weight-light);
+    --font-weight-normal: var(--ksv-ds-font-weight-regular);
+    --font-weight-medium: var(--ksv-ds-font-weight-medium);
+    --font-weight-semibold: var(--ksv-ds-font-weight-semibold);
+    --font-weight-bold: var(--ksv-ds-font-weight-bold);
+    --font-weight-extrabold: var(--ksv-ds-font-weight-extrabold);
+  }
+}
 
 @layer resets {
   *,
