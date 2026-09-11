@@ -29,7 +29,7 @@ export default function ContactFormWrapper() {
         if (!script) {
             script = document.createElement('script');
             script.id = scriptId;
-            script.src = 'https://stupendous-capybara-9eb558.netlify.app/contact-form-mfe.js';
+            script.src = 'https://ksv-contact-form.netlify.app/contact-form-mfe.js';
             script.async = true;
             script.onload = () => setIsLoaded(true);
             script.onerror = (err) => console.error('Failed to load MFE script:', err);
@@ -62,7 +62,7 @@ export default function ContactFormWrapper() {
         if (mfe.shadowRoot) {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = 'https://stupendous-capybara-9eb558.netlify.app/contact-form-mfe.css';
+            link.href = 'https://ksv-contact-form.netlify.app/contact-form-mfe.css';
             mfe.shadowRoot.appendChild(link);
         }
     }, [isLoaded]);
